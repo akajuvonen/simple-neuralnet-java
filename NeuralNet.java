@@ -3,10 +3,16 @@
   */
 public class NeuralNet {
 
+    /**
+      * Trains the network using training data.
+      */
     public void train() {
         System.out.println("This is the train method");
     }
 
+    /**
+      * Classifies new data.
+      */
     public void classify() {
         System.out.println("This is the classify method");
     }
