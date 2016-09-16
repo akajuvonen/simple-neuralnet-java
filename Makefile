@@ -1,10 +1,10 @@
 all: build
 
 build: 
-	javac NeuralNet.java
+	javac src/NeuralNet.java
 
 run:
-	java NeuralNet
+	java -cp src/ NeuralNet
 
 clean:
-	rm *.class
+	rm -v src/*.class
