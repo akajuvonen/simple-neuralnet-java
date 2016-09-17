@@ -1,9 +1,9 @@
-import static org.junit.Test;
+import static junit.framework.*;
 
-public class NeuralNetworkTests {
+public class NeuralNetTests {
 
     @Test
-    public void templateTest {
-        System.out.println("Tests TODO")
+    public void templateTest() {
+        System.out.println("Tests TODO");
     }
 }
