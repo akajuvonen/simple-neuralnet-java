@@ -8,3 +8,4 @@ run:
 
 clean:
 	rm -v src/*.class
+	rm -v test/*.class
