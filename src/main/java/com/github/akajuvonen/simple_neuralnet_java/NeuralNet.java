@@ -1,13 +1,13 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
 /**
- * Hello world!
+ * NeuralNet class.
  *
  */
-public class App 
+public class NeuralNet 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "This is a neural net." );
     }
 }
