@@ -2,7 +2,6 @@ package com.github.akajuvonen.simple_neuralnet_java;
 
 /**
  * NeuralNet class.
- *
  */
 public class NeuralNet
 {
