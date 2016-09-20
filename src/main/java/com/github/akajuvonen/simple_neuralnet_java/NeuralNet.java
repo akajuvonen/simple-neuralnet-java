@@ -27,7 +27,6 @@ public class NeuralNet
     public static void main( String[] args )
     {
         System.out.println( "This is a neural net." );
-        // Doesn't do anything yet
         NeuralNet net = new NeuralNet();
         net.train();
         net.classify();
