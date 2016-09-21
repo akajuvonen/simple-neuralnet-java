@@ -1,5 +1,8 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
+// For printing arrays
+import java.util.Arrays;
+
 /**
  * NeuralNet class.
  */
@@ -7,9 +10,15 @@ public class NeuralNet
 {
   /**
    * Trains the network using training data.
+   *
+   * @param train_in The training input data (observations)
+   * @param train_out The training output data (expected classifications)
    */
-  public void train() {
+  public void train(double[][] train_in, double[][] train_out) {
       System.out.println("This is the train method");
+      // Print out nested arrays using deep to string method
+      System.out.println(Arrays.deepToString(train_in));
+      System.out.println(Arrays.deepToString(train_out));
   }
 
   /**
@@ -44,7 +53,7 @@ public class NeuralNet
           {0,0}
         };
         NeuralNet net = new NeuralNet();
-        net.train();
+        net.train(train_in,train_out);
         net.classify();
     }
 }
