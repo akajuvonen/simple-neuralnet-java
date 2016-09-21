@@ -25,6 +25,7 @@ public class NeuralNet
      */
     public static void main( String[] args )
     {
+        // Input data for training
         double[][] train_in = new double[][]{
           {1.0,0.0,0.0},
           {0.0,0.0,1.0},
@@ -33,6 +34,7 @@ public class NeuralNet
           {0.0,1.0,0.0},
           {0.0,0.0,0.0}
         };
+        // Training data outputs
         double[][] train_out = new double[][]{
           {1.0},
           {0.0},
