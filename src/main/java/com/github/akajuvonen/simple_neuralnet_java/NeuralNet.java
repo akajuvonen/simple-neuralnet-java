@@ -25,7 +25,22 @@ public class NeuralNet
      */
     public static void main( String[] args )
     {
-        System.out.println( "This is a neural net." );
+        double[][] train_in = new double[][]{
+          {1.0,0.0,0.0},
+          {0.0,0.0,1.0},
+          {1.0,1.0,1.0},
+          {1.0,1.0,0.0},
+          {0.0,1.0,0.0},
+          {0.0,0.0,0.0}
+        };
+        double[][] train_out = new double[][]{
+          {1.0},
+          {0.0},
+          {1.0},
+          {1.0},
+          {0.0},
+          {0,0}
+        };
         NeuralNet net = new NeuralNet();
         net.train();
         net.classify();
