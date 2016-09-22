@@ -13,5 +13,8 @@ The network can be run using `java -cp target/neuralnet-VERSION.jar com.github.a
 ##Tests
 The package command already runs tests, but you can run unit tests separately with `mvn test`.
 
+##Creating javadoc documentation
+You can also create javadoc if needed by running `mvn javadoc:javadoc`. The documentation will be found in `target/site/apidocs/index.html`.
+
 ##Cleaning
 `mvn clean` cleans up the target folder.
