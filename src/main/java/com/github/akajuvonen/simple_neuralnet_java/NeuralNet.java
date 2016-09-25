@@ -8,6 +8,9 @@ import java.util.Arrays;
  */
 public class NeuralNet
 {
+  private int hidden_size;
+  private int max_iterations;
+  private double learning_rate;
   /**
    * Trains the network using training data.
    *
