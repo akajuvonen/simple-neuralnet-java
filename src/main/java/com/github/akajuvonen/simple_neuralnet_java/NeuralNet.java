@@ -10,7 +10,14 @@ public class NeuralNet
 {
   private int hidden_size;
   private int max_iterations;
-  private double learning_rate;
+  private boolean trained;
+
+  public NeuralNet(int hidden_size, int max_iterations) {
+    hidden_size = hidden_size;
+    max_iterations = max_iterations;
+    trained = false;
+  }
+
   /**
    * Trains the network using training data.
    *
@@ -55,7 +62,7 @@ public class NeuralNet
           {0.0},
           {0,0}
         };
-        NeuralNet net = new NeuralNet();
+        NeuralNet net = new NeuralNet(4, 60000);
         net.train(train_in,train_out);
         net.classify();
     }
