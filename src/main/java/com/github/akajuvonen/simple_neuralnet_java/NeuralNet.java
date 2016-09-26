@@ -13,9 +13,9 @@ public class NeuralNet
   private boolean trained;
 
   public NeuralNet(int hidden_size, int max_iterations) {
-    hidden_size = hidden_size;
-    max_iterations = max_iterations;
-    trained = false;
+    this.hidden_size = hidden_size;
+    this.max_iterations = max_iterations;
+    this.trained = false;
   }
 
   /**
