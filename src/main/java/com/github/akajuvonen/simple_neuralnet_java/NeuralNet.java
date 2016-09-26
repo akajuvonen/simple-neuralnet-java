@@ -17,6 +17,12 @@ public class NeuralNet
   private double[][] weights_1;
   private double[][] weights_2;
 
+  /**
+   * The NeuralNet class constructor.
+   *
+   * @param hidden_size The size of the hidden layer in nodes
+   * @param max_iterations After how many iterations stop the training
+   */
   public NeuralNet(int hidden_size, int max_iterations) {
     this.hidden_size = hidden_size;
     this.max_iterations = max_iterations;
