@@ -11,6 +11,8 @@ public class NeuralNet
   private int hidden_size;
   private int max_iterations;
   private boolean trained;
+  private double[][] weights_1;
+  private double[][] weights_2;
 
   public NeuralNet(int hidden_size, int max_iterations) {
     this.hidden_size = hidden_size;
