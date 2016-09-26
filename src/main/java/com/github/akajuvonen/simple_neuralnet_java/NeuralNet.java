@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 /**
  * NeuralNet class.
+ *
+ * @author Antti Juvonen
+ * @version 0.1
  */
 public class NeuralNet
 {
