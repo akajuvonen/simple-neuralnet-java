@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for neural network.
  */
-public class NeuralNetTest 
+public class NeuralNetTest
     extends TestCase
 {
     /**
@@ -29,10 +29,12 @@ public class NeuralNetTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Neural net sanity test.
      */
     public void testNeuralNet()
     {
         assertTrue( true );
+        // Create a new net
+        NeuralNet net = new NeuralNet(4,10000);
     }
 }
