@@ -33,8 +33,8 @@ public class NeuralNetTest
      */
     public void testNeuralNet()
     {
-        assertTrue( true );
         // Create a new net
         NeuralNet net = new NeuralNet(4,10000);
+        assertTrue( true );
     }
 }
