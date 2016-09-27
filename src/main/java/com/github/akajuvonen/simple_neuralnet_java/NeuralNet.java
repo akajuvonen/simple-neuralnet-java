@@ -64,6 +64,7 @@ public class NeuralNet
       // Print out nested arrays using deep to string method
       System.out.println(Arrays.deepToString(train_in));
       System.out.println(Arrays.deepToString(train_out));
+      System.out.println(SigmoidTools.sigmoid(10));
   }
 
   /**
