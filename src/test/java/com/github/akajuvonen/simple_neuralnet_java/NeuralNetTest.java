@@ -6,6 +6,9 @@ import junit.framework.TestSuite;
 
 /**
  * Unit test for neural network.
+ *
+ * @author Antti Juvonen
+ * @version 0.1
  */
 public class NeuralNetTest
     extends TestCase
