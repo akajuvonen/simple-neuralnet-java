@@ -13,7 +13,7 @@ public class SigmoidTools {
    * @param x The input value
    * @return Sigmoid function result
    */
-  private double sigmoid(double x) {
+  public static double sigmoid(double x) {
     return 1/(1+Math.exp(-x));
   }
 
@@ -26,7 +26,7 @@ public class SigmoidTools {
    * @param x The input value
    * @return Sigmoid derivative function result
    */
-  private double sigmoid_derivative(double x) {
+  public static double sigmoid_derivative(double x) {
     return x*(1-x);
   }
 }
