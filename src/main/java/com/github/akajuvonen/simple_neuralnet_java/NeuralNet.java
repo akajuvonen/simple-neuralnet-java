@@ -30,6 +30,16 @@ public class NeuralNet
   }
 
   /**
+   * Sigmoid function. Returns 1 / (1+exp(-x)).
+   *
+   * @param x The input value
+   * @return Sigmoid function result
+   */
+  private double sigmoid(double x) {
+    return 1/(1+Math.exp(-x));
+  }
+
+  /**
    * Trains the network using training data.
    *
    * @param train_in The training input data (observations)
