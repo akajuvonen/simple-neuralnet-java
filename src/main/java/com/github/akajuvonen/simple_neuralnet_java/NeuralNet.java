@@ -59,6 +59,7 @@ public class NeuralNet
    * @param train_out The training output data (expected classifications)
    */
   public void train(double[][] train_in, double[][] train_out) {
+      this.trained = true;
       System.out.println("This is the train method");
       // Print out nested arrays using deep to string method
       System.out.println(Arrays.deepToString(train_in));
