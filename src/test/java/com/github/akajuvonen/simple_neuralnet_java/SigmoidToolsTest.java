@@ -32,10 +32,22 @@ public class SigmoidToolsTest
     }
 
     /**
-     * Neural net sanity test.
+     * Sigmoid function test
      */
     public void testSigmoid()
     {
-        assertTrue( true );
+        double i, result;
+        // sigmoid(-10) should be close to zero
+        i = -10.0;
+        result = SigmoidTools.sigmoid(i);
+        assertTrue(result < 0.1);
+        // sigmoid(10) should be close to 1
+        i = 10.0;
+        result = SigmoidTools.sigmoid(i);
+        assertTrue(result > 0.9);
+        // sigmoid(0) should be 0.5
+        i = 0.0;
+        result = SigmoidTools.sigmoid(i);
+        assertEquals(result, 0.5);
     }
 }
