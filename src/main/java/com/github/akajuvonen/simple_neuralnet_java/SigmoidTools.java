@@ -26,7 +26,7 @@ public class SigmoidTools {
    * @param x The input value
    * @return Sigmoid derivative function result
    */
-  public static double sigmoid_derivative(double x) {
+  public static double sigmoidDerivative(double x) {
     return x*(1-x);
   }
 }
