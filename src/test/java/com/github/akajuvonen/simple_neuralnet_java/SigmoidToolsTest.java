@@ -50,4 +50,24 @@ public class SigmoidToolsTest
         result = SigmoidTools.sigmoid(i);
         assertEquals(result, 0.5);
     }
+
+    /**
+     * Sigmoid derivative test
+     */
+     public void testSigmoidDerivative()
+     {
+       double i, result;
+        // should be close to zero
+        i = -10.0;
+        result = SigmoidTools.sigmoidDerivative(SigmoidTools.sigmoid(i));
+        assertTrue(result < 0.1);
+        // should be close to 0
+        i = 10.0;
+        result = SigmoidTools.sigmoidDerivative(SigmoidTools.sigmoid(i));
+        assertTrue(result < 0.1);
+        // should be 0.25
+        i = 0.0;
+        result = SigmoidTools.sigmoidDerivative(SigmoidTools.sigmoid(i));
+        assertEquals(result, 0.25);
+     }
 }
