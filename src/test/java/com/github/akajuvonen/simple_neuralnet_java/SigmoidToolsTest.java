@@ -8,7 +8,7 @@ import junit.framework.TestSuite;
  * Unit test for sigmoid and derivative functions.
  *
  * @author Antti Juvonen
- * @version 0.1
+ * @version 1.0
  */
 public class SigmoidToolsTest
     extends TestCase
