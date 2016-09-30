@@ -7,7 +7,7 @@ import java.util.Arrays;
  * NeuralNet class.
  *
  * @author Antti Juvonen
- * @version 0.1
+ * @version 0.3
  */
 public class NeuralNet
 {
