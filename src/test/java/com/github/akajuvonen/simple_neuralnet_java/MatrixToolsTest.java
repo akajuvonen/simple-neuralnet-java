@@ -33,19 +33,19 @@ public class MatrixToolsTest
      */
     public void testMultiply() {
       // Input matrices
-      double[][] a = new double[][] {
+      double[][] a = {
         {1.0,2.0,3.0},
         {2.0,3.0,3.0},
         {4.0,1.0,1.0},
         {4.0,4.0,3.0}
       };
-      double[][] b = new double[][] {
+      double[][] b = {
         {1.0,2.0},
         {2.0,3.0},
         {4.0,1.0},
       };
       // Expected output
-      double[][] expected = new double[][] {
+      double[][] expected = {
         {17.0,11.0},
         {20.0,16.0},
         {10.0,12.0},
