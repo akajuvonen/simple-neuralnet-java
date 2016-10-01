@@ -11,31 +11,27 @@ import junit.framework.TestSuite;
  * @version 0.1
  */
 public class NeuralNetTest
-    extends TestCase
-{
+    extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public NeuralNetTest( String testName )
-    {
-        super( testName );
+    public NeuralNetTest(String testName) {
+        super(testName);
     }
 
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( NeuralNetTest.class );
+    public static Test suite() {
+        return new TestSuite(NeuralNetTest.class);
     }
 
     /**
      * Neural net sanity test.
      */
-    public void testNeuralNet()
-    {
+    public void testNeuralNet() {
         // Create a new net
         NeuralNet net = new NeuralNet(4,10000);
         assertTrue( true );

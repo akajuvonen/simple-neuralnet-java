@@ -11,31 +11,27 @@ import junit.framework.TestSuite;
  * @version 0.1
  */
 public class MatrixToolsTest
-    extends TestCase
-{
+    extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public MatrixToolsTest( String testName )
-    {
-        super( testName );
+    public MatrixToolsTest(String testName) {
+        super(testName);
     }
 
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( MatrixToolsTest.class );
+    public static Test suite() {
+        return new TestSuite(MatrixToolsTest.class);
     }
 
     /**
      * Test matrix multiplication
      */
-    public void testMultiply()
-    {
+    public void testMultiply() {
       // Input matrices
       double[][] a = new double[][] {
         {1.0,2.0,3.0},
@@ -64,8 +60,7 @@ public class MatrixToolsTest
     /**
      * Test matrix multiplication when array sizes don't match
      */
-    public void testMultiplyArrayMismatch()
-    {
+    public void testMultiplyArrayMismatch() {
     }
 
     /**

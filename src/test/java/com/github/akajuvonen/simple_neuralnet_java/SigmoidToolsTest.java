@@ -11,31 +11,27 @@ import junit.framework.TestSuite;
  * @version 1.0
  */
 public class SigmoidToolsTest
-    extends TestCase
-{
+    extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public SigmoidToolsTest( String testName )
-    {
-        super( testName );
+    public SigmoidToolsTest(String testName) {
+        super(testName);
     }
 
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( SigmoidToolsTest.class );
+    public static Test suite() {
+        return new TestSuite(SigmoidToolsTest.class);
     }
 
     /**
      * Sigmoid function test
      */
-    public void testSigmoid()
-    {
+    public void testSigmoid() {
         double i, result;
         // sigmoid(-10) should be close to zero
         i = -10.0;
@@ -54,8 +50,7 @@ public class SigmoidToolsTest
     /**
      * Sigmoid derivative test
      */
-     public void testSigmoidDerivative()
-     {
+     public void testSigmoidDerivative() {
        double i, result;
         // should be close to zero
         i = -10.0;
