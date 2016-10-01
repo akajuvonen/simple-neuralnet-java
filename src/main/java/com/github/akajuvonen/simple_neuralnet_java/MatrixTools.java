@@ -1,7 +1,5 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
-import java.util.Arrays;
-
 /**
  * Matrix operations library.
  *
@@ -25,7 +23,6 @@ public class MatrixTools {
         }
       }
     }
-    System.out.println(Arrays.deepToString(c));
     return c;
   }
 }
