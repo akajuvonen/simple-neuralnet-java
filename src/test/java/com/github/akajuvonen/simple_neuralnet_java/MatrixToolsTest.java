@@ -52,7 +52,7 @@ public class MatrixToolsTest
         {24.0,23.0}
       };
       double[][] actual;
-      actual = MatrixTools.Multiply(a,b);
+      actual = MatrixTools.multiply(a,b);
       // Test that the result is correct
       assertEquals(expected,actual);
     }

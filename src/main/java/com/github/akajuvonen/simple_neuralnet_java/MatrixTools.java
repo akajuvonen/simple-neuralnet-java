@@ -14,8 +14,7 @@ public class MatrixTools {
    * @param b Second array
    * @return c The resulting matrix
    */
-  public static double[][] Multiply(double[][] a, double[][] b) {
-    // TODO
+  public static double[][] multiply(double[][] a, double[][] b) {
     return a;
   }
 }
