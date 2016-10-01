@@ -32,10 +32,32 @@ public class MatrixToolsTest
     }
 
     /**
-     * TODO
+     * Test matrix multiplication
      */
-    public void testSomething()
+    public void testMultiply()
     {
-      assertTrue(true);
+      // Input matrices
+      double[][] a = new double[][] {
+        {1.0,2.0,3.0},
+        {2.0,3.0,3.0},
+        {4.0,1.0,1.0},
+        {4.0,4.0,3.0}
+      };
+      double[][] b = new double[][] {
+        {1.0,2.0},
+        {2.0,3.0},
+        {4.0,1.0},
+      };
+      // Expected output
+      double[][] expected = new double[][] {
+        {17.0,11.0},
+        {20.0,16.0},
+        {10.0,12.0},
+        {24.0,23.0}
+      };
+      double[][] actual;
+      actual = MatrixTools.Multiply(a,b);
+      // Test that the result is correct
+      assertEquals(expected,actual);
     }
 }
