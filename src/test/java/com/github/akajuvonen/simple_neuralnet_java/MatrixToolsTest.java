@@ -60,4 +60,17 @@ public class MatrixToolsTest
       // Test that the result is correct
       assertEquals(expected,actual);
     }
+
+    /**
+     * Test matrix multiplication when array sizes don't match
+     */
+    public void testMultiplyArrayMismatch()
+    {
+    }
+
+    /**
+     * Test matrix multiplication when nested array lengths not equal
+     */
+    public void testMultiplyArrayLengthVaries() {
+    }
 }
