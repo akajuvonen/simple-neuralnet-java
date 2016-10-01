@@ -54,7 +54,9 @@ public class MatrixToolsTest
       double[][] actual;
       actual = MatrixTools.multiply(a,b);
       // Test that the result is correct
-      assertEquals(expected,actual);
+      for(int i = 0; i < expected.length; i++) {
+        assertArrayEquals(expected[i],actual[i]);
+      }
     }
 
     /**
