@@ -11,10 +11,15 @@ import java.util.Arrays;
  */
 public class NeuralNet
 {
+  // hidden layer size
   private int hidden_size;
+  // max iterations to run training
   private int max_iterations;
+  // is the network already trained
   private boolean trained;
+  // weights between input and hidden layer
   private double[][] weights_1;
+  // weights between hidden and output layer
   private double[][] weights_2;
 
   /**

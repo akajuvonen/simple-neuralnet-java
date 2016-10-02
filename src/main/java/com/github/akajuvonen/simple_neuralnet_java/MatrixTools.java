@@ -7,7 +7,6 @@ package com.github.akajuvonen.simple_neuralnet_java;
  * @version 0.3
  */
 public class MatrixTools {
-
   /**
    * A helper method to check if all nested array's elements have the same length.
    *
@@ -52,5 +51,4 @@ public class MatrixTools {
     }
     return c;
   }
-
 }
