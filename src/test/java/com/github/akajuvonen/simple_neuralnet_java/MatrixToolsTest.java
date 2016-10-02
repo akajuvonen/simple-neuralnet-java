@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
  * Unit tests for matrix operations library.
  *
  * @author Antti Juvonen
- * @version 0.1
+ * @version 0.3
  */
 public class MatrixToolsTest {
     /**

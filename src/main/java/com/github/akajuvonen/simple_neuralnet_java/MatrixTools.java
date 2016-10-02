@@ -4,7 +4,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
  * Matrix operations library.
  *
  * @author Antti Juvonen
- * @version 0.2
+ * @version 0.3
  */
 public class MatrixTools {
 
@@ -52,5 +52,5 @@ public class MatrixTools {
     }
     return c;
   }
-  
+
 }
