@@ -15,6 +15,11 @@ public class MatrixTools {
    * @return c The resulting matrix
    */
   public static double[][] multiply(double[][] a, double[][] b) {
+    // If the matrix sizes not suitable for multiplication
+    if(a[0].length != b.length) {
+      throw new IllegalArgumentException("The matrix sizes do not match for multiplication");
+    }
+
     double[][] c = new double[a.length][b[0].length];
     for(int i = 0; i < a.length; i++) {
       for(int j = 0; j < a[0].length; j++) {

@@ -2,6 +2,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
 
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit tests for matrix operations library.
@@ -47,6 +48,17 @@ public class MatrixToolsTest {
      */
     @Test
     public void testMultiplyArrayMismatch() {
+      // Is the exception raised
+      boolean raised = false;
+      try {
+        // The arrays are not the right shape for multiplication
+        double[][] a = new double[4][3];
+        double[][] b = new double[2][3];
+        double[][] result = MatrixTools.multiply(a,b);
+      } catch(IllegalArgumentException e) {
+        raised = true;
+      }
+      assertTrue(raised);
     }
 
     /**
