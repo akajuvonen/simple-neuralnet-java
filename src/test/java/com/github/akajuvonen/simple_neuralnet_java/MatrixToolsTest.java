@@ -49,11 +49,11 @@ public class MatrixToolsTest {
     @Test
     public void testMultiplyArrayMismatch() {
       // Is the exception raised
+      // The arrays are not the right shape for multiplication
       boolean raised = false;
+      double[][] a = new double[4][3];
+      double[][] b = new double[2][3];
       try {
-        // The arrays are not the right shape for multiplication
-        double[][] a = new double[4][3];
-        double[][] b = new double[2][3];
         double[][] result = MatrixTools.multiply(a,b);
       } catch(IllegalArgumentException e) {
         raised = true;
@@ -66,5 +66,21 @@ public class MatrixToolsTest {
      */
     @Test
     public void testMultiplyArrayLengthVaries() {
+      // Is the exception raised
+      boolean raised = false;
+      double[][] a = new double[4][3];
+      // elements of array b are of different length
+      double[][] b = {
+        {0.0,0.0,0.0},
+        {0.0,0.0,0.0},
+        {0.0,0.0}
+      };
+      try {
+        double[][] result = MatrixTools.multiply(a,b);
+      } catch(IllegalArgumentException e) {
+        raised = true;
+      }
+      assertTrue(raised);
+
     }
 }
