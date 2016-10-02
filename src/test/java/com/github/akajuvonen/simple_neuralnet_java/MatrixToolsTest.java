@@ -1,8 +1,7 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * Unit tests for matrix operations library.
@@ -10,27 +9,11 @@ import junit.framework.TestSuite;
  * @author Antti Juvonen
  * @version 0.1
  */
-public class MatrixToolsTest
-    extends TestCase {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public MatrixToolsTest(String testName) {
-        super(testName);
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite() {
-        return new TestSuite(MatrixToolsTest.class);
-    }
-
+public class MatrixToolsTest {
     /**
      * Test matrix multiplication
      */
+    @Test
     public void testMultiply() {
       // Input matrices
       double[][] a = {
@@ -55,19 +38,21 @@ public class MatrixToolsTest
       actual = MatrixTools.multiply(a,b);
       // Test that the result is correct
       for(int i = 0; i < expected.length; i++) {
-        assertArrayEquals(expected[i],actual[i]);
+        assertArrayEquals(expected[i],actual[i],0.0);
       }
     }
 
     /**
      * Test matrix multiplication when array sizes don't match
      */
+    @Test
     public void testMultiplyArrayMismatch() {
     }
 
     /**
      * Test matrix multiplication when nested array lengths not equal
      */
+    @Test
     public void testMultiplyArrayLengthVaries() {
     }
 }
