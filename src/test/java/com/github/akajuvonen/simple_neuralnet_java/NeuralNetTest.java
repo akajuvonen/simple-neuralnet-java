@@ -10,13 +10,13 @@ import static org.junit.Assert.assertTrue;
  * @version 0.1
  */
 public class NeuralNetTest {
-    /**
-     * Neural net sanity test.
-     */
-    @Test
-    public void testNeuralNet() {
-        // Create a new net
-        NeuralNet net = new NeuralNet(4,10000);
-        assertTrue(true);
-    }
+  /**
+   * Neural net sanity test.
+   */
+  @Test
+  public void testNeuralNet() {
+      // Create a new net
+      NeuralNet net = new NeuralNet(4,10000);
+      assertTrue(true);
+  }
 }
