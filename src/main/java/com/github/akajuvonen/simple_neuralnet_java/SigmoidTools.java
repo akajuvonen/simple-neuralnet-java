@@ -6,7 +6,16 @@ package com.github.akajuvonen.simple_neuralnet_java;
  * @author Antti Juvonen
  * @version 1.0
  */
-public class SigmoidTools {
+final class SigmoidTools {
+    /**
+     * A private constructor for SigmoidTools.
+     * This exists because java creates a public constructor
+     * by default, which we don't want.
+     */
+    private SigmoidTools() {
+        throw new AssertionError("Trying to instantiate a utility class");
+    }
+
     /**
      * Sigmoid function. Returns 1 / (1+exp(-x)).
      *

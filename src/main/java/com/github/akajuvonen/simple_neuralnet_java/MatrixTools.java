@@ -6,7 +6,16 @@ package com.github.akajuvonen.simple_neuralnet_java;
  * @author Antti Juvonen
  * @version 0.3
  */
-public class MatrixTools {
+final class MatrixTools {
+    /**
+     * A private constructorfor MatrixTools.
+     * This exists because java creates a public constructor
+     * by default, which we don't want.
+     */
+    private MatrixTools() {
+        throw new AssertionError("Trying to instantiate a utility class");
+    }
+
     /**
      * A helper method to check if all nested array's elements have the same length.
      *
