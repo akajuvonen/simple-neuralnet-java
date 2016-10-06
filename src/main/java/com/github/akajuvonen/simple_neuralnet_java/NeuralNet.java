@@ -9,8 +9,7 @@ import java.util.Arrays;
  * @author Antti Juvonen
  * @version 0.3
  */
-public class NeuralNet
-{
+public class NeuralNet {
     // hidden layer size
     private int hidden_size;
     // max iterations to run training
@@ -61,8 +60,7 @@ public class NeuralNet
       *
       * @param args the standard command line arguments
       */
-      public static void main( String[] args )
-      {
+      public static void main(String[] args) {
           // Input data for training
           double[][] train_in = {
               {1.0, 0.0, 0.0},
