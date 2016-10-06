@@ -11,15 +11,15 @@ import java.util.Arrays;
  */
 public class NeuralNet {
     // hidden layer size
-    private int hidden_size;
+    private int hiddenSize;
     // max iterations to run training
-    private int max_iterations;
+    private int maxIterations;
     // is the network already trained
     private boolean trained;
     // weights between input and hidden layer
-    private double[][] weights_1;
+    private double[][] weights1;
     // weights between hidden and output layer
-    private double[][] weights_2;
+    private double[][] weights2;
 
     /**
     * The NeuralNet class constructor.
@@ -27,9 +27,9 @@ public class NeuralNet {
     * @param hidden_size The size of the hidden layer in nodes
     * @param max_iterations After how many iterations stop the training
     */
-    public NeuralNet(int hidden_size, int max_iterations) {
-        this.hidden_size = hidden_size;
-        this.max_iterations = max_iterations;
+    public NeuralNet(int hiddenSize, int maxIterations) {
+        this.hiddenSize = hiddenSize;
+        this.maxIterations = maxIterations;
         this.trained = false;
     }
 
@@ -39,12 +39,12 @@ public class NeuralNet {
     * @param train_in The training input data (observations)
     * @param train_out The training output data (expected classifications)
     */
-    public void train(double[][] train_in, double[][] train_out) {
+    public void train(double[][] trainIn, double[][] trainOut) {
         this.trained = true;
         System.out.println("This is the train method");
         // Print out nested arrays using deep to string method
-        System.out.println(Arrays.deepToString(train_in));
-        System.out.println(Arrays.deepToString(train_out));
+        System.out.println(Arrays.deepToString(trainIn));
+        System.out.println(Arrays.deepToString(trainOut));
         System.out.println(SigmoidTools.sigmoid(10));
     }
 
@@ -62,7 +62,7 @@ public class NeuralNet {
       */
       public static void main(String[] args) {
           // Input data for training
-          double[][] train_in = {
+          double[][] trainIn = {
               {1.0, 0.0, 0.0},
               {0.0, 0.0, 1.0},
               {1.0, 1.0, 1.0},
@@ -71,7 +71,7 @@ public class NeuralNet {
               {0.0, 0.0, 0.0}
           };
           // Training data outputs
-          double[][] train_out = {
+          double[][] trainOut = {
               {1.0},
               {0.0},
               {1.0},
@@ -80,7 +80,7 @@ public class NeuralNet {
               {0.0}
           };
           NeuralNet net = new NeuralNet(4, 60000);
-          net.train(train_in, train_out);
+          net.train(trainIn, trainOut);
           net.classify();
       }
 }
