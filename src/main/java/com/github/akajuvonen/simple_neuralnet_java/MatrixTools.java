@@ -17,7 +17,8 @@ final class MatrixTools {
     }
 
     /**
-     * A helper method to check if all nested array's elements have the same length.
+     * A helper method to check if all nested array's elements
+     * have the same length.
      *
      * @param a A double[][] nested array
      * @return False if not equal, otherwise true
@@ -43,11 +44,13 @@ final class MatrixTools {
     public static double[][] multiply(double[][] a, double[][] b) {
         // If the matrix sizes not suitable for multiplication
         if (a[0].length != b.length) {
-            throw new IllegalArgumentException("The matrix sizes do not match for multiplication");
+            throw new IllegalArgumentException(
+            "The matrix sizes do not match for multiplication");
         }
         // Check that the input nested array lengths are equal
         if (!lengthsEqual(a) || !lengthsEqual(b)) {
-            throw new IllegalArgumentException("The nested matrix lengths are not equal");
+            throw new IllegalArgumentException(
+            "The nested matrix lengths are not equal");
         }
 
         double[][] c = new double[a.length][b[0].length];
