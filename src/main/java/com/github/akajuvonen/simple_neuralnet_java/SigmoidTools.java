@@ -14,7 +14,7 @@ public class SigmoidTools {
      * @return Sigmoid function result
      */
     public static double sigmoid(double x) {
-        return 1/(1+Math.exp(-x));
+        return 1 / (1 + Math.exp(-x));
     }
 
     /**
@@ -27,6 +27,6 @@ public class SigmoidTools {
      * @return Sigmoid derivative function result
      */
     public static double sigmoidDerivative(double x) {
-        return x*(1-x);
+        return x * (1 - x);
     }
 }

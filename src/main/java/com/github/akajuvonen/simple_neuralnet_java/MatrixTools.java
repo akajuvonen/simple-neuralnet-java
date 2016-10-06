@@ -15,7 +15,7 @@ public class MatrixTools {
      */
     private static boolean lengthsEqual(double[][] a) {
         int length = a[0].length;
-        for(int i = 1; i < a.length; i++) {
+        for (int i = 1; i < a.length; i++) {
             if (a[i].length != length) {
                 return false;
             }
@@ -33,18 +33,18 @@ public class MatrixTools {
      */
     public static double[][] multiply(double[][] a, double[][] b) {
         // If the matrix sizes not suitable for multiplication
-        if(a[0].length != b.length) {
+        if (a[0].length != b.length) {
             throw new IllegalArgumentException("The matrix sizes do not match for multiplication");
         }
         // Check that the input nested array lengths are equal
-        if(!lengthsEqual(a) || !lengthsEqual(b)) {
+        if (!lengthsEqual(a) || !lengthsEqual(b)) {
             throw new IllegalArgumentException("The nested matrix lengths are not equal");
         }
 
         double[][] c = new double[a.length][b[0].length];
-        for(int i = 0; i < a.length; i++) {
-            for(int j = 0; j < a[0].length; j++) {
-                for(int k = 0; k < b[0].length; k++) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[0].length; j++) {
+                for (int k = 0; k < b[0].length; k++) {
                     c[i][k] += a[i][j] * b[j][k];
                 }
             }

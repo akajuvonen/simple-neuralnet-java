@@ -65,12 +65,12 @@ public class NeuralNet
       {
           // Input data for training
           double[][] train_in = {
-              {1.0,0.0,0.0},
-              {0.0,0.0,1.0},
-              {1.0,1.0,1.0},
-              {1.0,1.0,0.0},
-              {0.0,1.0,0.0},
-              {0.0,0.0,0.0}
+              {1.0, 0.0, 0.0},
+              {0.0, 0.0, 1.0},
+              {1.0, 1.0, 1.0},
+              {1.0, 1.0, 0.0},
+              {0.0, 1.0, 0.0},
+              {0.0, 0.0, 0.0}
           };
           // Training data outputs
           double[][] train_out = {
@@ -79,10 +79,10 @@ public class NeuralNet
               {1.0},
               {1.0},
               {0.0},
-              {0,0}
+              {0.0}
           };
           NeuralNet net = new NeuralNet(4, 60000);
-          net.train(train_in,train_out);
+          net.train(train_in, train_out);
           net.classify();
       }
 }
