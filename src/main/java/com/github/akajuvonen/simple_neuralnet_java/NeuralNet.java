@@ -24,8 +24,8 @@ public class NeuralNet {
     /**
     * The NeuralNet class constructor.
     *
-    * @param hidden_size The size of the hidden layer in nodes
-    * @param max_iterations After how many iterations stop the training
+    * @param hiddenSize The size of the hidden layer in nodes
+    * @param maxIterations After how many iterations stop the training
     */
     public NeuralNet(int hiddenSize, int maxIterations) {
         this.hiddenSize = hiddenSize;
@@ -36,8 +36,8 @@ public class NeuralNet {
     /**
     * Trains the network using training data.
     *
-    * @param train_in The training input data (observations)
-    * @param train_out The training output data (expected classifications)
+    * @param trainIn The training input data (observations)
+    * @param trainOut The training output data (expected classifications)
     */
     public void train(double[][] trainIn, double[][] trainOut) {
         this.trained = true;
