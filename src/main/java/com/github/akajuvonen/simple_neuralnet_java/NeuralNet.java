@@ -39,7 +39,7 @@ public class NeuralNet {
     * @param trainIn The training input data (observations)
     * @param trainOut The training output data (expected classifications)
     */
-    public void train(double[][] trainIn, double[][] trainOut) {
+    public final void train(double[][] trainIn, double[][] trainOut) {
         this.trained = true;
         System.out.println("This is the train method");
         // Print out nested arrays using deep to string method
@@ -51,7 +51,7 @@ public class NeuralNet {
     /**
      * Classifies new data.
      */
-     public void classify() {
+     public final void classify() {
          System.out.println("This is the classify method");
      }
 
