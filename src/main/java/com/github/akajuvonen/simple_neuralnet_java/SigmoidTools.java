@@ -22,7 +22,7 @@ final class SigmoidTools {
      * @param x The input value
      * @return Sigmoid function result
      */
-    static double sigmoid(double x) {
+    static double sigmoid(final double x) {
         return 1 / (1 + Math.exp(-x));
     }
 
@@ -35,7 +35,7 @@ final class SigmoidTools {
      * @param x The input value
      * @return Sigmoid derivative function result
      */
-    static double sigmoidDerivative(double x) {
+    static double sigmoidDerivative(final double x) {
         return x * (1 - x);
     }
 }
