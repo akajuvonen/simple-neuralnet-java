@@ -36,7 +36,8 @@ public class NeuralNet {
     * @param trainIn The training input data (observations)
     * @param trainOut The training output data (expected classifications)
     */
-    public final void train(final double[][] trainIn, final double[][] trainOut) {
+    public final void train(final double[][] trainIn,
+                            final double[][] trainOut) {
         this.trained = true;
         System.out.println("This is the train method");
     }
