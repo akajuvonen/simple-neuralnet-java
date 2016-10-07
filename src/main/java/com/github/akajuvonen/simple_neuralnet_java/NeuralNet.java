@@ -1,8 +1,5 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
-// For printing arrays
-import java.util.Arrays;
-
 /**
  * NeuralNet class.
  *
@@ -42,10 +39,6 @@ public class NeuralNet {
     public final void train(double[][] trainIn, double[][] trainOut) {
         this.trained = true;
         System.out.println("This is the train method");
-        // Print out nested arrays using deep to string method
-        System.out.println(Arrays.deepToString(trainIn));
-        System.out.println(Arrays.deepToString(trainOut));
-        System.out.println(SigmoidTools.sigmoid(10));
     }
 
     /**
