@@ -23,7 +23,7 @@ final class MatrixTools {
      * @param a A double[][] nested array
      * @return False if not equal, otherwise true
      */
-    private static boolean lengthsEqual(double[][] a) {
+    private static boolean lengthsEqual(final double[][] a) {
         int length = a[0].length;
         for (int i = 1; i < a.length; i++) {
             if (a[i].length != length) {
@@ -41,7 +41,7 @@ final class MatrixTools {
      * @param b Second array
      * @return c The resulting matrix
      */
-    static double[][] multiply(double[][] a, double[][] b) {
+    static double[][] multiply(final double[][] a, final double[][] b) {
         // If the matrix sizes not suitable for multiplication
         if (a[0].length != b.length) {
             throw new IllegalArgumentException(
