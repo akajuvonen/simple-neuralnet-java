@@ -24,7 +24,7 @@ public class NeuralNet {
     * @param hidSize The size of the hidden layer in nodes
     * @param maxIter After how many iterations stop the training
     */
-    public NeuralNet(int hidSize, int maxIter) {
+    public NeuralNet(final int hidSize, final int maxIter) {
         this.hiddenSize = hiddenSize;
         this.maxIterations = maxIterations;
         this.trained = false;
@@ -36,7 +36,7 @@ public class NeuralNet {
     * @param trainIn The training input data (observations)
     * @param trainOut The training output data (expected classifications)
     */
-    public final void train(double[][] trainIn, double[][] trainOut) {
+    public final void train(final double[][] trainIn, final double[][] trainOut) {
         this.trained = true;
         System.out.println("This is the train method");
     }
@@ -53,7 +53,7 @@ public class NeuralNet {
       *
       * @param args the standard command line arguments
       */
-      public static void main(String[] args) {
+      public static void main(final String[] args) {
           // Input data for training
           double[][] trainIn = {
               {1.0, 0.0, 0.0},
