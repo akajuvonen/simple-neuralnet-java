@@ -25,8 +25,8 @@ public class NeuralNet {
     * @param maxIter After how many iterations stop the training
     */
     public NeuralNet(final int hidSize, final int maxIter) {
-        this.hiddenSize = hiddenSize;
-        this.maxIterations = maxIterations;
+        this.hiddenSize = hidSize;
+        this.maxIterations = maxIter;
         this.trained = false;
     }
 
@@ -72,7 +72,9 @@ public class NeuralNet {
               {0.0},
               {0.0}
           };
-          NeuralNet net = new NeuralNet(4, 60000);
+          final int hiddenSize = 4;
+          final int maxIterations = 60000;
+          NeuralNet net = new NeuralNet(hiddenSize, maxIterations);
           net.train(trainIn, trainOut);
           net.classify();
       }
