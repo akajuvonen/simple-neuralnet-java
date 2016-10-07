@@ -41,7 +41,7 @@ final class MatrixTools {
      * @param b Second array
      * @return c The resulting matrix
      */
-    public static double[][] multiply(double[][] a, double[][] b) {
+    static double[][] multiply(double[][] a, double[][] b) {
         // If the matrix sizes not suitable for multiplication
         if (a[0].length != b.length) {
             throw new IllegalArgumentException(
