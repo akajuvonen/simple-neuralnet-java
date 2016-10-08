@@ -7,15 +7,25 @@ package com.github.akajuvonen.simple_neuralnet_java;
  * @version 0.3
  */
 public class NeuralNet {
-    // hidden layer size
+    /**
+     * Hidden layer size (nodes).
+     */
     private int hiddenSize;
-    // max iterations to run training
+    /**
+     * Max number of iterations to run for training the network.
+     */
     private int maxIterations;
-    // is the network already trained
+    /**
+     * A flag to check if the network is already trained.
+     */
     private boolean trained;
-    // weights between input and hidden layer
+    /**
+     * Weights between input and hidden layer.
+     */
     private double[][] weights1;
-    // weights between hidden and output layer
+    /**
+     * Weights between hidden and output layer.
+     */
     private double[][] weights2;
 
     /**
