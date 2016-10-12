@@ -3,6 +3,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Unit tests for matrix operations library.
@@ -81,5 +82,37 @@ public class MatrixToolsTest {
             raised = true;
         }
         assertTrue(raised);
+    }
+
+    private double[] findArrayMinMax(double[][] arr) {
+        double min = arr[0][0];
+        double max = arr[0][0];
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = 0; j < arr[i].length; j++) {
+                if(arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        double[] minMax = { min, max };
+        return minMax;
+    }
+
+    /**
+     * Test random matrix generation
+     */
+    @Test
+    public void testRandomMatrix() {
+        int i = 3;
+        int j = 4;
+        double[][] randArr = MatrixTools.randomMatrix(i,j);
+        assertEquals(randArr.length,i);
+        assertEquals(randArr[0].length,j);
+        double[] minMax = findArrayMinMax(randArr);
+        assertTrue(minMax[0] > -1.0);
+        assertTrue(minMax[1] < 1.0);
     }
 }
