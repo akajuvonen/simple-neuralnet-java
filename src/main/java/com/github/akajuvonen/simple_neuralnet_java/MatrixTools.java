@@ -73,7 +73,7 @@ final class MatrixTools {
      * @param y Number of columns in return array
      * @return randMatrix The random nested array
      */
-    static double[][] randomMatrix(int x, int y) {
+    static double[][] randomMatrix(final int x, final int y) {
         Random r = new Random();
         double[][] randMatrix = new double[x][y];
         for(int i = 0; i < randMatrix.length; i++) {
