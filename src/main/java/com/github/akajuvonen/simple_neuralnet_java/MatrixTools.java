@@ -76,8 +76,8 @@ final class MatrixTools {
     static double[][] randomMatrix(final int x, final int y) {
         Random r = new Random();
         double[][] randMatrix = new double[x][y];
-        for(int i = 0; i < randMatrix.length; i++) {
-            for(int j = 0; j < randMatrix[i].length; j++) {
+        for (int i = 0; i < randMatrix.length; i++) {
+            for (int j = 0; j < randMatrix[i].length; j++) {
                 // Random values between -1.0 and 1.0
                 randMatrix[i][j] = 2 * r.nextDouble() - 1.0;
             }
