@@ -84,6 +84,9 @@ public class MatrixToolsTest {
         assertTrue(raised);
     }
 
+    /**
+     * Find the minimum and maximum value from a double nested array.
+     */
     private double[] findArrayMinMax(double[][] arr) {
         double min = arr[0][0];
         double max = arr[0][0];
@@ -106,11 +109,15 @@ public class MatrixToolsTest {
      */
     @Test
     public void testRandomMatrix() {
+        // Rows, columns
         int i = 3;
         int j = 4;
+        // Create random matrix
         double[][] randArr = MatrixTools.randomMatrix(i,j);
+        // Make sure size is correct
         assertEquals(randArr.length,i);
         assertEquals(randArr[0].length,j);
+        // Make sure values between -1.0 and 1.0
         double[] minMax = findArrayMinMax(randArr);
         assertTrue(minMax[0] > -1.0);
         assertTrue(minMax[1] < 1.0);
