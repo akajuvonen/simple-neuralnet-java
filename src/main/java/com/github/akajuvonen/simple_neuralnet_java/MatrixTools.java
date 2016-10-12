@@ -84,4 +84,24 @@ final class MatrixTools {
         }
         return randMatrix;
     }
+
+    /**
+     * Find the minimum and maximum value from a double nested array.
+     */
+    static double[] findArrayMinMax(double[][] arr) {
+        double min = arr[0][0];
+        double max = arr[0][0];
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = 0; j < arr[i].length; j++) {
+                if(arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        double[] minMax = { min, max };
+        return minMax;
+    }
 }

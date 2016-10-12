@@ -85,26 +85,6 @@ public class MatrixToolsTest {
     }
 
     /**
-     * Find the minimum and maximum value from a double nested array.
-     */
-    private double[] findArrayMinMax(double[][] arr) {
-        double min = arr[0][0];
-        double max = arr[0][0];
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                if(arr[i][j] > max) {
-                    max = arr[i][j];
-                }
-                if (arr[i][j] < min) {
-                    min = arr[i][j];
-                }
-            }
-        }
-        double[] minMax = { min, max };
-        return minMax;
-    }
-
-    /**
      * Test random matrix generation
      */
     @Test
@@ -118,7 +98,7 @@ public class MatrixToolsTest {
         assertEquals(randArr.length,i);
         assertEquals(randArr[0].length,j);
         // Make sure values between -1.0 and 1.0
-        double[] minMax = findArrayMinMax(randArr);
+        double[] minMax = MatrixTools.findArrayMinMax(randArr);
         assertTrue(minMax[0] > -1.0);
         assertTrue(minMax[1] < 1.0);
     }
