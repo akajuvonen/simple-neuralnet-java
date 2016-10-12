@@ -1,5 +1,7 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
+import java.util.Random;
+
 /**
  * Matrix operations library.
  *
@@ -62,5 +64,24 @@ final class MatrixTools {
             }
         }
         return c;
+    }
+
+    /**
+     * Create a random matrix with values from -1 to 1.
+     *
+     * @param x Number of lines in return array
+     * @param y Number of columns in return array
+     * @return randMatrix The random nested array
+     */
+    static double[][] randomMatrix(int x, int y) {
+        Random r = new Random();
+        double[][] randMatrix = new double[x][y];
+        for(int i = 0; i < randMatrix.length; i++) {
+            for(int j = 0; j < randMatrix[i].length; j++) {
+                // Random values between -1.0 and 1.0
+                randMatrix[i][j] = 2 * r.nextDouble() - 1.0;
+            }
+        }
+        return randMatrix;
     }
 }
