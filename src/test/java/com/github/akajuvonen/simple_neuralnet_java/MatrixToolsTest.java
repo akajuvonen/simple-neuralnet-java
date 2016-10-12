@@ -102,4 +102,9 @@ public class MatrixToolsTest {
         assertTrue(minMax[0] > -1.0);
         assertTrue(minMax[1] < 1.0);
     }
+
+    @Test
+    public void testFindArrayMinMax() {
+        // TODO
+    }
 }
