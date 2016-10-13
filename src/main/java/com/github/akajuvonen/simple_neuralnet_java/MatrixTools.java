@@ -92,6 +92,9 @@ final class MatrixTools {
 
     /**
      * Find the minimum and maximum value from a double nested array.
+     *
+     * @param arr Nested double array to be analyzed
+     * @return minMax An int array, first value is min, the second max
      */
     static double[] findArrayMinMax(final double[][] arr) {
         double min = arr[0][0];
