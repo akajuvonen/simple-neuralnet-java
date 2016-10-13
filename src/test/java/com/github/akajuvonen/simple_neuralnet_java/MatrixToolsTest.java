@@ -39,7 +39,7 @@ public class MatrixToolsTest {
         double[][] actual;
         actual = MatrixTools.multiply(a,b);
         // Test that the result is correct
-        for(int i = 0; i < expected.length; i++) {
+        for (int i = 0; i < expected.length; i++) {
             assertArrayEquals(expected[i],actual[i],0.0);
         }
     }
@@ -56,7 +56,7 @@ public class MatrixToolsTest {
         double[][] b = new double[2][3];
         try {
             double[][] result = MatrixTools.multiply(a,b);
-        } catch(IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             raised = true;
         }
         assertTrue(raised);
@@ -78,7 +78,7 @@ public class MatrixToolsTest {
         };
         try {
             double[][] result = MatrixTools.multiply(a,b);
-        } catch(IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             raised = true;
         }
         assertTrue(raised);
@@ -108,8 +108,23 @@ public class MatrixToolsTest {
      * ints negative or zeros.
      */
     @Test
-    public void testRMSizeNotPositiveInt () {
-        //
+    public void testRMSizeNotPositiveInt() {
+        // Check for zeros
+        boolean raised = false;
+        try {
+            MatrixTools.randomMatrix(0,0);
+        } catch (IllegalArgumentException e) {
+            raised = true;
+        }
+        assertTrue(raised);
+        // Check for negative numbers
+        raised = false;
+        try {
+            MatrixTools.randomMatrix(-1,-2);
+        } catch (IllegalArgumentException e) {
+            raised = true;
+        }
+        assertTrue(raised);
     }
 
     /**
