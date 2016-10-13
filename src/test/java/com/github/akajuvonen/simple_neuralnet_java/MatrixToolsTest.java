@@ -103,6 +103,18 @@ public class MatrixToolsTest {
         assertTrue(minMax[1] < 1.0);
     }
 
+    /**
+     * Random matrix generation should return an error if array size
+     * ints negative or zeros.
+     */
+    @Test
+    public void testRMSizeNotPositiveInt () {
+        //
+    }
+
+    /**
+     * Test that finding array min and max works correctly.
+     */
     @Test
     public void testFindArrayMinMax() {
         // TODO
