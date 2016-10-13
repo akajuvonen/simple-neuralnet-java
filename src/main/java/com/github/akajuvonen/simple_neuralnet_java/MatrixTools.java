@@ -74,6 +74,11 @@ final class MatrixTools {
      * @return randMatrix The random nested array
      */
     static double[][] randomMatrix(final int x, final int y) {
+        // Check for invalid arguments
+        if (x <= 0 || y <= 0) {
+            throw new IllegalArgumentException(
+            "Size must consist of positive integers");
+        }
         Random r = new Random();
         double[][] randMatrix = new double[x][y];
         for (int i = 0; i < randMatrix.length; i++) {
