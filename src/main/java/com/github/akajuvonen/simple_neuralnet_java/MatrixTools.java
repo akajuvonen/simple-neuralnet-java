@@ -99,9 +99,9 @@ final class MatrixTools {
     static double[] findArrayMinMax(final double[][] arr) {
         double min = arr[0][0];
         double max = arr[0][0];
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                if(arr[i][j] > max) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
                     max = arr[i][j];
                 }
                 if (arr[i][j] < min) {
@@ -109,7 +109,7 @@ final class MatrixTools {
                 }
             }
         }
-        double[] minMax = { min, max };
+        double[] minMax = {min, max};
         return minMax;
     }
 }
