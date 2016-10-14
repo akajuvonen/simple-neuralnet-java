@@ -132,6 +132,14 @@ public class MatrixToolsTest {
      */
     @Test
     public void testFindArrayMinMax() {
-        // TODO
+        double min = -1.0;
+        double max = 2.0;
+        double[][] a = {
+            {1.0,max,1.0},
+            {0.0,min}
+        };
+        double[] minMax = MatrixTools.findArrayMinMax(a);
+        assertEquals(minMax[0],min,0.0);
+        assertEquals(minMax[1],max,0.0);
     }
 }
