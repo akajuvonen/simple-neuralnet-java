@@ -49,7 +49,6 @@ public class NeuralNet {
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
         this.trained = true;
-        System.out.println("This is the train method");
         // Init weights randomly
         weights1 = MatrixTools.randomMatrix(trainIn[0].length,hiddenSize);
         weights2 = MatrixTools.randomMatrix(hiddenSize,trainOut[0].length);
@@ -59,7 +58,7 @@ public class NeuralNet {
      * Classifies new data.
      */
      public final void classify() {
-         System.out.println("This is the classify method");
+         //
      }
 
      /**
