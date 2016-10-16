@@ -50,8 +50,8 @@ public class NeuralNet {
                             final double[][] trainOut) {
         this.trained = true;
         // Init weights randomly
-        weights1 = MatrixTools.randomMatrix(trainIn[0].length,hiddenSize);
-        weights2 = MatrixTools.randomMatrix(hiddenSize,trainOut[0].length);
+        weights1 = MatrixTools.randomMatrix(trainIn[0].length, hiddenSize);
+        weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
     }
 
     /**
