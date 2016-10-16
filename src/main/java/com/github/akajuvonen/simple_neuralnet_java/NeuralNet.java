@@ -38,7 +38,7 @@ public class NeuralNet {
         this.hiddenSize = hidSize;
         this.maxIterations = maxIter;
         this.trained = false;
-    }
+        }
 
     /**
      * Trains the network using training data.
@@ -50,6 +50,9 @@ public class NeuralNet {
                             final double[][] trainOut) {
         this.trained = true;
         System.out.println("This is the train method");
+        // Init weights randomly
+        weights1 = MatrixTools.randomMatrix(trainIn[0].length,hiddenSize);
+        weights2 = MatrixTools.randomMatrix(hiddenSize,trainOut[0].length);
     }
 
     /**
