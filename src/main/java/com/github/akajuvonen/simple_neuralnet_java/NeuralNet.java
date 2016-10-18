@@ -48,10 +48,13 @@ public class NeuralNet {
      */
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
-        this.trained = true;
+        trained = true;
         // Init weights randomly
         weights1 = MatrixTools.randomMatrix(trainIn[0].length, hiddenSize);
         weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
+        double[][] hiddenLayer, outputLayer;
+        //for (int i = 0; i < maxIterations; i++) {
+        //}
     }
 
     /**
