@@ -84,8 +84,12 @@ public class MatrixToolsTest {
         assertTrue(raised);
     }
 
+    /**
+     * Test that one element of multiplication can be a vector.
+     */
     @Test
     public void testMultiplyOneDimensional() {
+        // The first element is a vector
         double[][] a = {
             {1,2,3}
         };
@@ -97,6 +101,7 @@ public class MatrixToolsTest {
         double[][] result1 = MatrixTools.multiply(a,b);
         assertEquals(result1.length,1);
         assertEquals(result1[0].length,3);
+        // The second element is a vector
         double[][] c = {
             {1},
             {2},
