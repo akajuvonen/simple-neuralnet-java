@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class MatrixToolsTest {
     /**
-     * Test matrix multiplication
+     * Test matrix multiplication.
      */
     @Test
     public void testMultiply() {
@@ -45,7 +45,7 @@ public class MatrixToolsTest {
     }
 
     /**
-     * Test matrix multiplication when array sizes don't match
+     * Test matrix multiplication when array sizes don't match.
      */
     @Test
     public void testMultiplyArrayMismatch() {
@@ -63,7 +63,7 @@ public class MatrixToolsTest {
     }
 
     /**
-     * Test matrix multiplication when nested array lengths not equal
+     * Test matrix multiplication when nested array lengths not equal.
      */
     @Test
     public void testMultiplyArrayLengthVaries() {
@@ -116,7 +116,7 @@ public class MatrixToolsTest {
     }
 
     /**
-     * Test random matrix generation
+     * Test random matrix generation.
      */
     @Test
     public void testRandomMatrix() {
