@@ -84,6 +84,32 @@ public class MatrixToolsTest {
         assertTrue(raised);
     }
 
+    @Test
+    public void testMultiplyOneDimensional() {
+        double[][] a = {
+            {1,2,3}
+        };
+        double[][] b = {
+            {1,2,3},
+            {2,3,4},
+            {3,4,5}
+        };
+        double[][] result1 = MatrixTools.multiply(a,b);
+        assertEquals(result1.length,1);
+        assertEquals(result1[0].length,3);
+        double[][] c = {
+            {1},
+            {2},
+            {3}
+        };
+        double[][] d = {
+            {1,2,3}
+        };
+        double[][] result2 = MatrixTools.multiply(c,d);
+        assertEquals(result2.length,3);
+        assertEquals(result2[0].length,3);
+    }
+
     /**
      * Test random matrix generation
      */
