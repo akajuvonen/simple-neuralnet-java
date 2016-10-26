@@ -29,12 +29,14 @@ public class NeuralNet {
      *
      * @param hidSize The size of the hidden layer in nodes
      * @param maxIter After how many iterations stop the training
+     * @param trainIn Training data inputs
+     * @param trainOut Training data expected outputs
      */
     public NeuralNet(final int hidSize, final int maxIter,
         final double[][] trainIn, final double[][] trainOut) {
         hiddenSize = hidSize;
         maxIterations = maxIter;
-        train(trainIn,trainOut);
+        train(trainIn, trainOut);
         }
 
     /**
@@ -87,7 +89,7 @@ public class NeuralNet {
           final int hiddenSize = 4;
           final int maxIterations = 60000;
           NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
-            trainIn,trainOut);
+            trainIn, trainOut);
           net.classify();
       }
 }
