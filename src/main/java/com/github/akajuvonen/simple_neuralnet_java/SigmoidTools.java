@@ -16,6 +16,18 @@ final class SigmoidTools {
         throw new AssertionError("Trying to instantiate a utility class");
     }
 
+    static double[][] sigmoid(final double[][] x) {
+        int n = x.length;
+        int m = x[0].length;
+        double[][] y = new double[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                y[i][j] = sigmoid(x[i][j]);
+            }
+        }
+        return y;
+    }
+
     /**
      * Sigmoid function. Returns 1 / (1+exp(-x)).
      *
