@@ -16,7 +16,7 @@ public class NeuralNetTest {
     @Test
     public void testNeuralNet() {
         // Create a new net
-        NeuralNet net = new NeuralNet(4,10000);
+        //NeuralNet net = new NeuralNet(4,10000);
         assertTrue(true);
     }
 }
