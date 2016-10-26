@@ -8,7 +8,7 @@ import java.util.Random;
  * @author Antti Juvonen
  * @version 0.5
  */
-final class MatrixTools {
+public final class MatrixTools {
     /**
      * A private constructorfor MatrixTools.
      * This exists because java creates a public constructor
@@ -43,7 +43,7 @@ final class MatrixTools {
      * @param b Second array
      * @return c The resulting matrix
      */
-    static double[][] multiply(final double[][] a, final double[][] b) {
+    public static double[][] multiply(final double[][] a, final double[][] b) {
         // If the matrix sizes not suitable for multiplication
         if (a[0].length != b.length) {
             throw new IllegalArgumentException(
@@ -73,7 +73,7 @@ final class MatrixTools {
      * @param y Number of columns in return array
      * @return randMatrix The random nested array
      */
-    static double[][] randomMatrix(final int x, final int y) {
+    public static double[][] randomMatrix(final int x, final int y) {
         // Check for invalid arguments
         if (x <= 0 || y <= 0) {
             throw new IllegalArgumentException(
@@ -96,7 +96,7 @@ final class MatrixTools {
      * @param arr Nested double array to be analyzed
      * @return minMax An int array, first value is min, the second max
      */
-    static double[] findArrayMinMax(final double[][] arr) {
+    public static double[] findArrayMinMax(final double[][] arr) {
         double min = arr[0][0];
         double max = arr[0][0];
         for (int i = 0; i < arr.length; i++) {

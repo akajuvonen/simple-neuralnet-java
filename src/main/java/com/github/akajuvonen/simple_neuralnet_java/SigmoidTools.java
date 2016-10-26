@@ -6,7 +6,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
  * @author Antti Juvonen
  * @version 1.0
  */
-final class SigmoidTools {
+public final class SigmoidTools {
     /**
      * A private constructor for SigmoidTools.
      * This exists because java creates a public constructor
@@ -22,7 +22,7 @@ final class SigmoidTools {
      * @param x The input array
      * @return y Sigmoid function applied to all elements of x
      */
-    static double[][] sigmoid(final double[][] x) {
+    public static double[][] sigmoid(final double[][] x) {
         int n = x.length;
         int m = x[0].length;
         double[][] y = new double[n][m];
@@ -40,7 +40,7 @@ final class SigmoidTools {
      * @param x The input value
      * @return Sigmoid function result
      */
-    static double sigmoid(final double x) {
+    public static double sigmoid(final double x) {
         return 1 / (1 + Math.exp(-x));
     }
 
@@ -53,7 +53,7 @@ final class SigmoidTools {
      * @param x The input value
      * @return Sigmoid derivative function result
      */
-    static double sigmoidDerivative(final double x) {
+    public static double sigmoidDerivative(final double x) {
         return x * (1 - x);
     }
 }
