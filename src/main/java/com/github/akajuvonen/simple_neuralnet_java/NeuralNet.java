@@ -36,6 +36,10 @@ public class NeuralNet {
         final double[][] trainIn, final double[][] trainOut) {
         hiddenSize = hidSize;
         maxIterations = maxIter;
+        // Init weights randomly
+        weights1 = MatrixTools.randomMatrix(trainIn[0].length, hiddenSize);
+        weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
+        // Train the network
         train(trainIn, trainOut);
         }
 
@@ -47,9 +51,6 @@ public class NeuralNet {
      */
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
-        // Init weights randomly
-        weights1 = MatrixTools.randomMatrix(trainIn[0].length, hiddenSize);
-        weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
         double[][] hiddenLayer, outputLayer;
         //for (int i = 0; i < maxIterations; i++) {
         //}
