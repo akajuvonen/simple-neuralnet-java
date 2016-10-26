@@ -20,7 +20,7 @@ public final class SigmoidTools {
      * Sigmoid for nested arrays.
      *
      * @param x The input array
-     * @return y Sigmoid function applied to all elements of x
+     * @return Sigmoid function applied to all elements of x
      */
     public static double[][] sigmoid(final double[][] x) {
         int n = x.length;

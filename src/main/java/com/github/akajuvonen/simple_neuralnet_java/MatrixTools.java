@@ -41,7 +41,7 @@ public final class MatrixTools {
      *
      * @param a First array
      * @param b Second array
-     * @return c The resulting matrix
+     * @return The resulting matrix
      */
     public static double[][] multiply(final double[][] a, final double[][] b) {
         // If the matrix sizes not suitable for multiplication
@@ -71,7 +71,7 @@ public final class MatrixTools {
      *
      * @param x Number of lines in return array
      * @param y Number of columns in return array
-     * @return randMatrix The random nested array
+     * @return The random nested array
      */
     public static double[][] randomMatrix(final int x, final int y) {
         // Check for invalid arguments
@@ -94,7 +94,7 @@ public final class MatrixTools {
      * Find the minimum and maximum value from a double nested array.
      *
      * @param arr Nested double array to be analyzed
-     * @return minMax An int array, first value is min, the second max
+     * @return An int array, first value is min, the second max
      */
     public static double[] findArrayMinMax(final double[][] arr) {
         double min = arr[0][0];
