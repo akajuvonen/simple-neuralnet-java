@@ -16,6 +16,12 @@ final class SigmoidTools {
         throw new AssertionError("Trying to instantiate a utility class");
     }
 
+    /**
+     * Sigmoid for nested arrays.
+     *
+     * @param x The input array
+     * @return y Sigmoid function applied to all elements of x
+     */
     static double[][] sigmoid(final double[][] x) {
         int n = x.length;
         int m = x[0].length;
