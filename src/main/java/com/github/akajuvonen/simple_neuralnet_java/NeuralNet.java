@@ -16,10 +16,6 @@ public class NeuralNet {
      */
     private int maxIterations;
     /**
-     * A flag to check if the network is already trained.
-     */
-    private boolean trained;
-    /**
      * Weights between input and hidden layer.
      */
     private double[][] weights1;
@@ -34,10 +30,11 @@ public class NeuralNet {
      * @param hidSize The size of the hidden layer in nodes
      * @param maxIter After how many iterations stop the training
      */
-    public NeuralNet(final int hidSize, final int maxIter) {
+    public NeuralNet(final int hidSize, final int maxIter,
+        final double[][] trainIn, final double[][] trainOut) {
         hiddenSize = hidSize;
         maxIterations = maxIter;
-        trained = false;
+        train(trainIn,trainOut);
         }
 
     /**
@@ -48,7 +45,6 @@ public class NeuralNet {
      */
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
-        trained = true;
         // Init weights randomly
         weights1 = MatrixTools.randomMatrix(trainIn[0].length, hiddenSize);
         weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
@@ -90,8 +86,8 @@ public class NeuralNet {
           };
           final int hiddenSize = 4;
           final int maxIterations = 60000;
-          NeuralNet net = new NeuralNet(hiddenSize, maxIterations);
-          net.train(trainIn, trainOut);
+          NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
+            trainIn,trainOut);
           net.classify();
       }
 }
