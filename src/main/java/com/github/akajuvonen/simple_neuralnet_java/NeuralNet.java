@@ -26,6 +26,7 @@ public class NeuralNet {
 
     /**
      * The NeuralNet class constructor.
+     * Initializes random weights and trains the network.
      *
      * @param hidSize The size of the hidden layer in nodes
      * @param maxIter After how many iterations stop the training
@@ -45,6 +46,7 @@ public class NeuralNet {
 
     /**
      * Trains the network using training data.
+     * Note that training is done once when initializing the network.
      *
      * @param trainIn The training input data (observations)
      * @param trainOut The training output data (expected classifications)
