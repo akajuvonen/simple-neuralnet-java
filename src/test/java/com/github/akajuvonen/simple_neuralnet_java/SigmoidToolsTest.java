@@ -75,8 +75,9 @@ public class SigmoidToolsTest {
         double[][] input = {
             {-10.0,0.0,10.0}
         };
-        double[] expected = { 0.0, 0.0, 0.25};
-        double[][] result = SigmoidTools.sigmoidDerivative(input);
+        double[] expected = { 0.0, 0.25, 0.0};
+        double[][] result = SigmoidTools.sigmoidDerivative(
+            SigmoidTools.sigmoid(input));
         for (int j = 0; j < input[0].length; j++) {
             assertEquals(expected[j], result[0][j], 0.1);
         }
