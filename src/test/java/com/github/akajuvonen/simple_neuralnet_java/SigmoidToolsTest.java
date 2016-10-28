@@ -3,6 +3,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * Unit test for sigmoid and derivative functions.
@@ -29,6 +30,21 @@ public class SigmoidToolsTest {
         i = 0.0;
         result = SigmoidTools.sigmoid(i);
         assertEquals(result, 0.5, 0.0);
+    }
+
+    /**
+     * Test that sigmoid works for nested arrays.
+     */
+    @Test
+    public void testSigmoidArray() {
+        double[][] input = {
+            {-10.0,0.0,10.0}
+        };
+        double[] expected = { 0.0, 0.5, 1.0};
+        double[][] result = SigmoidTools.sigmoid(input);
+        for (int j = 0; j < input[0].length; j++) {
+            assertEquals(result[0][j], expected[j], 0.1);
+        }
     }
 
     /**
