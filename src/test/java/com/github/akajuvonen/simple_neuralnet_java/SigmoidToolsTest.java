@@ -66,4 +66,19 @@ public class SigmoidToolsTest {
          result = SigmoidTools.sigmoidDerivative(SigmoidTools.sigmoid(i));
          assertEquals(result, 0.25, 0.0);
      }
+
+    /**
+     * Test that sigmoid derivative works for nested arrays.
+     */
+    @Test
+    public void testSigmoidDerivativeArray() {
+        double[][] input = {
+            {-10.0,0.0,10.0}
+        };
+        double[] expected = { 0.0, 0.0, 0.25};
+        double[][] result = SigmoidTools.sigmoidDerivative(input);
+        for (int j = 0; j < input[0].length; j++) {
+            assertEquals(result[0][j], expected[j], 0.1);
+        }
+    }
 }
