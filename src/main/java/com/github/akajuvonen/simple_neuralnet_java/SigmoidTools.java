@@ -17,24 +17,6 @@ public final class SigmoidTools {
     }
 
     /**
-     * Sigmoid for nested arrays.
-     *
-     * @param x The input array
-     * @return Sigmoid function applied to all elements of x
-     */
-    public static double[][] sigmoid(final double[][] x) {
-        int n = x.length;
-        int m = x[0].length;
-        double[][] y = new double[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                y[i][j] = sigmoid(x[i][j]);
-            }
-        }
-        return y;
-    }
-
-    /**
      * Sigmoid function. Returns 1 / (1+exp(-x)).
      *
      * @param x The input value
@@ -55,5 +37,23 @@ public final class SigmoidTools {
      */
     public static double sigmoidDerivative(final double x) {
         return x * (1 - x);
+    }
+
+    /**
+     * Sigmoid for nested arrays.
+     *
+     * @param x The input array
+     * @return Sigmoid function applied to all elements of x
+     */
+    public static double[][] sigmoid(final double[][] x) {
+        int n = x.length;
+        int m = x[0].length;
+        double[][] y = new double[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                y[i][j] = sigmoid(x[i][j]);
+            }
+        }
+        return y;
     }
 }
