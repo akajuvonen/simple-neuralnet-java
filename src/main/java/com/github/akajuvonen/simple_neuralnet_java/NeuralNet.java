@@ -54,8 +54,9 @@ public class NeuralNet {
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
         double[][] hiddenLayer, outputLayer;
-        //for (int i = 0; i < maxIterations; i++) {
-        //}
+        for (int i = 0; i < maxIterations; i++) {
+            hiddenLayer = SigmoidTools.sigmoid(MatrixTools.multiply(trainIn, weights1));
+        }
     }
 
     /**
