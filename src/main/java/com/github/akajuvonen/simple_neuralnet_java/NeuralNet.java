@@ -42,7 +42,7 @@ public class NeuralNet {
         weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
         // Train the network
         train(trainIn, trainOut);
-        }
+    }
 
     /**
      * Trains the network using training data.
