@@ -1,5 +1,10 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
+import static com.github.akajuvonen.simple_neuralnet_java.MatrixTools.multiply;
+import static com.github.akajuvonen.simple_neuralnet_java.MatrixTools.randomMatrix;
+import static com.github.akajuvonen.simple_neuralnet_java.SigmoidTools.sigmoid;
+import static com.github.akajuvonen.simple_neuralnet_java.SigmoidTools.sigmoidDerivative;
+
 /**
  * NeuralNet class.
  *
@@ -38,8 +43,8 @@ public class NeuralNet {
         hiddenSize = hidSize;
         maxIterations = maxIter;
         // Init weights randomly
-        weights1 = MatrixTools.randomMatrix(trainIn[0].length, hiddenSize);
-        weights2 = MatrixTools.randomMatrix(hiddenSize, trainOut[0].length);
+        weights1 = randomMatrix(trainIn[0].length, hiddenSize);
+        weights2 = randomMatrix(hiddenSize, trainOut[0].length);
         // Train the network
         train(trainIn, trainOut);
     }
@@ -56,9 +61,7 @@ public class NeuralNet {
         double[][] hiddenLayer, outputLayer;
         for (int i = 0; i < maxIterations; i++) {
             // Calculate the hidden (middle) layer
-            hiddenLayer = SigmoidTools.sigmoid(
-                MatrixTools.multiply(trainIn, weights1)
-            );
+            hiddenLayer = sigmoid(multiply(trainIn, weights1));
         }
     }
 
