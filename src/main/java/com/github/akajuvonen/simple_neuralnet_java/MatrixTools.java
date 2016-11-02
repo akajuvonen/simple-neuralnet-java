@@ -6,7 +6,7 @@ import java.util.Random;
  * Matrix operations library.
  *
  * @author Antti Juvonen
- * @version 0.5
+ * @version 0.6
  */
 public final class MatrixTools {
     /**

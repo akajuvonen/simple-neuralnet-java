@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Unit tests for matrix operations library.
  *
  * @author Antti Juvonen
- * @version 0.3
+ * @version 0.6
  */
 public class MatrixToolsTest {
     /**

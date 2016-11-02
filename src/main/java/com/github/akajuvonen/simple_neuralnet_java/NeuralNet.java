@@ -13,7 +13,7 @@ import static com.github.akajuvonen.simple_neuralnet_java.
  * NeuralNet class.
  *
  * @author Antti Juvonen
- * @version 0.3
+ * @version 0.5
  */
 public class NeuralNet {
     /**
