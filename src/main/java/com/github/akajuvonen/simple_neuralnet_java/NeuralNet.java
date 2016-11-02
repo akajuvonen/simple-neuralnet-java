@@ -72,38 +72,38 @@ public class NeuralNet {
     /**
      * Classifies new data.
      */
-     public final void classify() {
-         //
-     }
+    public final void classify() {
+        //
+    }
 
-     /**
-      * The main method.
-      *
-      * @param args the standard command line arguments
-      */
-      public static void main(final String[] args) {
-          // Input data for training
-          double[][] trainIn = {
-              {1.0, 0.0, 0.0},
-              {0.0, 0.0, 1.0},
-              {1.0, 1.0, 1.0},
-              {1.0, 1.0, 0.0},
-              {0.0, 1.0, 0.0},
-              {0.0, 0.0, 0.0}
-          };
-          // Training data outputs
-          double[][] trainOut = {
-              {1.0},
-              {0.0},
-              {1.0},
-              {1.0},
-              {0.0},
-              {0.0}
-          };
-          final int hiddenSize = 4;
-          final int maxIterations = 60000;
-          NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
+    /**
+     * The main method.
+     *
+     * @param args the standard command line arguments
+     */
+    public static void main(final String[] args) {
+        // Input data for training
+        double[][] trainIn = {
+            {1.0, 0.0, 0.0},
+            {0.0, 0.0, 1.0},
+            {1.0, 1.0, 1.0},
+            {1.0, 1.0, 0.0},
+            {0.0, 1.0, 0.0},
+            {0.0, 0.0, 0.0}
+        };
+        // Training data outputs
+        double[][] trainOut = {
+            {1.0},
+            {0.0},
+            {1.0},
+            {1.0},
+            {0.0},
+            {0.0}
+        };
+        final int hiddenSize = 4;
+        final int maxIterations = 60000;
+        NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
             trainIn, trainOut);
-          net.classify();
-      }
+        net.classify();
+    }
 }
