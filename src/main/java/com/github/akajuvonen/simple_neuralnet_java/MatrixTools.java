@@ -119,7 +119,7 @@ public final class MatrixTools {
      * @param x Input matrix
      * @return Transpose of the input matrix
      */
-    public static double[][] transpose(double[][] x) {
+    public static double[][] transpose(final double[][] x) {
         int n = x.length;
         int m = x[0].length;
         double[][] y = new double[m][n];
