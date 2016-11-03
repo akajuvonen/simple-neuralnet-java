@@ -115,6 +115,9 @@ public final class MatrixTools {
 
     /**
      * Transpose a matrix.
+     *
+     * @param x Input matrix
+     * @return Transpose of the input matrix
      */
     public static double[][] transpose(double[][] x) {
         int n = x.length;
