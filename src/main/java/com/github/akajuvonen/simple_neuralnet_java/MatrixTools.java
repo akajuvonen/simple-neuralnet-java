@@ -123,6 +123,12 @@ public final class MatrixTools {
         int n = x.length;
         int m = x[0].length;
         double[][] y = new double[m][n];
+        // Transpose
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                y[j][i] = x[i][j];
+            }
+        }
         return y;
     }
 }
