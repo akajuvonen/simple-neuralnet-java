@@ -19,28 +19,28 @@ public class MatrixToolsTest {
     public void testMultiply() {
         // Input matrices
         double[][] a = {
-            {1.0,2.0,3.0},
-            {2.0,3.0,3.0},
-            {4.0,1.0,1.0},
-            {4.0,4.0,3.0}
+            {1.0, 2.0, 3.0},
+            {2.0, 3.0, 3.0},
+            {4.0, 1.0, 1.0},
+            {4.0, 4.0, 3.0}
         };
         double[][] b = {
-            {1.0,2.0},
-            {2.0,3.0},
-            {4.0,1.0},
+            {1.0, 2.0},
+            {2.0, 3.0},
+            {4.0, 1.0},
         };
         // Expected output
         double[][] expected = {
-            {17.0,11.0},
-            {20.0,16.0},
-            {10.0,12.0},
-            {24.0,23.0}
+            {17.0, 11.0},
+            {20.0, 16.0},
+            {10.0, 12.0},
+            {24.0, 23.0}
         };
         double[][] actual;
         actual = MatrixTools.multiply(a,b);
         // Test that the result is correct
         for (int i = 0; i < expected.length; i++) {
-            assertArrayEquals(expected[i],actual[i],0.0);
+            assertArrayEquals(expected[i], actual[i], 0.0);
         }
     }
 
@@ -55,7 +55,7 @@ public class MatrixToolsTest {
         double[][] a = new double[4][3];
         double[][] b = new double[2][3];
         try {
-            double[][] result = MatrixTools.multiply(a,b);
+            double[][] result = MatrixTools.multiply(a, b);
         } catch (IllegalArgumentException e) {
             raised = true;
         }
@@ -72,9 +72,9 @@ public class MatrixToolsTest {
         double[][] a = new double[4][3];
         // elements of array b are of different length
         double[][] b = {
-            {0.0,0.0,0.0},
-            {0.0,0.0,0.0},
-            {0.0,0.0}
+            {0.0, 0.0, 0.0},
+            {0.0, 0.0, 0.0},
+            {0.0, 0.0}
         };
         try {
             double[][] result = MatrixTools.multiply(a,b);
@@ -91,16 +91,16 @@ public class MatrixToolsTest {
     public void testMultiplyOneDimensional() {
         // The first element is a vector
         double[][] a = {
-            {1,2,3}
+            {1, 2, 3}
         };
         double[][] b = {
-            {1,2,3},
-            {2,3,4},
-            {3,4,5}
+            {1, 2, 3},
+            {2, 3, 4},
+            {3, 4, 5}
         };
-        double[][] result1 = MatrixTools.multiply(a,b);
-        assertEquals(result1.length,1);
-        assertEquals(result1[0].length,3);
+        double[][] result1 = MatrixTools.multiply(a, b);
+        assertEquals(result1.length, 1);
+        assertEquals(result1[0].length, 3);
         // The second element is a vector
         double[][] c = {
             {1},
@@ -108,11 +108,11 @@ public class MatrixToolsTest {
             {3}
         };
         double[][] d = {
-            {1,2,3}
+            {1, 2, 3}
         };
-        double[][] result2 = MatrixTools.multiply(c,d);
-        assertEquals(result2.length,3);
-        assertEquals(result2[0].length,3);
+        double[][] result2 = MatrixTools.multiply(c, d);
+        assertEquals(result2.length, 3);
+        assertEquals(result2[0].length, 3);
     }
 
     /**
@@ -124,10 +124,10 @@ public class MatrixToolsTest {
         int i = 3;
         int j = 4;
         // Create random matrix
-        double[][] randArr = MatrixTools.randomMatrix(i,j);
+        double[][] randArr = MatrixTools.randomMatrix(i, j);
         // Make sure size is correct
-        assertEquals(randArr.length,i);
-        assertEquals(randArr[0].length,j);
+        assertEquals(randArr.length, i);
+        assertEquals(randArr[0].length, j);
         // Make sure values between -1.0 and 1.0
         double[] minMax = MatrixTools.findArrayMinMax(randArr);
         assertTrue(minMax[0] > -1.0);
@@ -143,7 +143,7 @@ public class MatrixToolsTest {
         // Check for zeros
         boolean raised = false;
         try {
-            MatrixTools.randomMatrix(0,0);
+            MatrixTools.randomMatrix(0, 0);
         } catch (IllegalArgumentException e) {
             raised = true;
         }
@@ -151,7 +151,7 @@ public class MatrixToolsTest {
         // Check for negative numbers
         raised = false;
         try {
-            MatrixTools.randomMatrix(-1,-2);
+            MatrixTools.randomMatrix(-1, -2);
         } catch (IllegalArgumentException e) {
             raised = true;
         }
@@ -166,12 +166,12 @@ public class MatrixToolsTest {
         double min = -1.0;
         double max = 2.0;
         double[][] a = {
-            {1.0,max,1.0},
-            {0.0,min}
+            {1.0, max, 1.0},
+            {0.0, min}
         };
         double[] minMax = MatrixTools.findArrayMinMax(a);
-        assertEquals(minMax[0],min,0.0);
-        assertEquals(minMax[1],max,0.0);
+        assertEquals(minMax[0], min, 0.0);
+        assertEquals(minMax[1], max, 0.0);
     }
 
     /**
@@ -180,13 +180,13 @@ public class MatrixToolsTest {
     @Test
     public void testTranspose() {
         double[][] x = {
-            {1,2},
-            {3,4},
-            {5,6}
+            {1, 2},
+            {3, 4},
+            {5, 6}
         };
         double[][] expected = {
-            {1,3,5},
-            {2,4,6}
+            {1, 3, 5},
+            {2, 4, 6}
         };
         double[][] y = MatrixTools.transpose(x);
         // Test that the result is correct

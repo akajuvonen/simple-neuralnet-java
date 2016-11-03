@@ -38,7 +38,7 @@ public class SigmoidToolsTest {
     @Test
     public void testSigmoidArray() {
         double[][] input = {
-            {-10.0,0.0,10.0}
+            {-10.0, 0.0, 10.0}
         };
         double[] expected = { 0.0, 0.5, 1.0};
         double[][] result = SigmoidTools.sigmoid(input);
