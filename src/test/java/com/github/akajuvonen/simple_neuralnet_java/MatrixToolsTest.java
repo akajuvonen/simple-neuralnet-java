@@ -174,6 +174,9 @@ public class MatrixToolsTest {
         assertEquals(minMax[1],max,0.0);
     }
 
+    /**
+     * Test that transpose works.
+     */
     @Test
     public void testTranspose() {
         double[][] x = {
@@ -189,6 +192,41 @@ public class MatrixToolsTest {
         // Test that the result is correct
         for (int i = 0; i < expected.length; i++) {
             assertArrayEquals(expected[i], y[i], 0.0);
+        }
+    }
+
+    /**
+     * Test that transpose works with 1d nested arrays.
+     */
+    @Test
+    public void testTransposeOneDimensional() {
+        // Case 1
+        double[][] input1 = {
+            {1, 2, 3}
+        };
+        double[][] expected1 = {
+            {1},
+            {2},
+            {3}
+        };
+        double[][] actual1 = MatrixTools.transpose(input1);
+        // Test that the result is correct
+        for (int i = 0; i < expected1.length; i++) {
+            assertArrayEquals(expected1[i], actual1[i], 0.0);
+        }
+        // Case 2
+        double[][] input2 = {
+            {1},
+            {2},
+            {3}
+        };
+        double[][] expected2 = {
+            {1, 2, 3}
+        };
+        double[][] actual2 = MatrixTools.transpose(input2);
+        // Test that the result is correct
+        for (int i = 0; i < expected2.length; i++) {
+            assertArrayEquals(expected2[i], actual2[i], 0.0);
         }
     }
 }
