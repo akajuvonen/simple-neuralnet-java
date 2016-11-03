@@ -112,4 +112,14 @@ public final class MatrixTools {
         double[] minMax = {min, max};
         return minMax;
     }
+
+    /**
+     * Transpose a matrix.
+     */
+    public static double[][] transpose(double[][] x) {
+        int n = x.length;
+        int m = x[0].length;
+        double[][] y = new double[m][n];
+        return y;
+    }
 }

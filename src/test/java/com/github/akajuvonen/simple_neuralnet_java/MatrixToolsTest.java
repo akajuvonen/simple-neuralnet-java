@@ -173,4 +173,22 @@ public class MatrixToolsTest {
         assertEquals(minMax[0],min,0.0);
         assertEquals(minMax[1],max,0.0);
     }
+
+    @Test
+    public void testTranspose() {
+        double[][] x = {
+            {1,2},
+            {3,4},
+            {5,6}
+        };
+        double[][] expected = {
+            {1,3,5},
+            {2,4,6}
+        };
+        double[][] y = MatrixTools.transpose(x);
+        // Test that the result is correct
+        for (int i = 0; i < expected.length; i++) {
+            assertArrayEquals(expected[i], y[i], 0.0);
+        }
+    }
 }
