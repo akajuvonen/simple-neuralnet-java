@@ -4,10 +4,12 @@ import static com.github.akajuvonen.simple_neuralnet_java.
     MatrixTools.multiply;
 import static com.github.akajuvonen.simple_neuralnet_java.
     MatrixTools.randomMatrix;
-//import static com.github.akajuvonen.simple_neuralnet_java.
-//    SigmoidTools.sigmoid;
-//import static com.github.akajuvonen.simple_neuralnet_java.
-//    SigmoidTools.sigmoidDerivative;
+import static com.github.akajuvonen.simple_neuralnet_java.
+    MatrixTools.transpose;
+import static com.github.akajuvonen.simple_neuralnet_java.
+    SigmoidTools.sigmoid;
+import static com.github.akajuvonen.simple_neuralnet_java.
+    SigmoidTools.sigmoidDerivative;
 
 /**
  * NeuralNet class.
