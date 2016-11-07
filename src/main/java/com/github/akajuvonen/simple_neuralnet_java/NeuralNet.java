@@ -34,6 +34,14 @@ public class NeuralNet {
      * Weights between hidden and output layer.
      */
     private double[][] weights2;
+    /**
+     * The hidden (middle) layer.
+     */
+    private double[][] hiddenLayer;
+    /**
+     * The output layer (results).
+     */
+    private double[][] outputLayer;
 
     /**
      * The NeuralNet class constructor.
