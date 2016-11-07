@@ -76,13 +76,14 @@ public class NeuralNet {
         for (int i = 0; i < maxIterations; i++) {
             // Calculate the hidden (middle) layer
             hiddenLayer = sigmoid(multiply(trainIn, weights1));
+            classify(trainIn);
         }
     }
 
     /**
      * Classifies new data.
      */
-    public final void classify() {
+    public final void classify(double[][] trainIn) {
         //
     }
 
@@ -114,6 +115,6 @@ public class NeuralNet {
         final int maxIterations = 60000;
         NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
             trainIn, trainOut);
-        net.classify();
+        //net.classify();
     }
 }
