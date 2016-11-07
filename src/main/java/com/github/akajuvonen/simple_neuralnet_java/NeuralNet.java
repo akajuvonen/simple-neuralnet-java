@@ -83,7 +83,7 @@ public class NeuralNet {
     /**
      * Classifies new data.
      */
-    public final void classify(double[][] trainIn) {
+    public final void classify(final double[][] trainIn) {
         //
     }
 
