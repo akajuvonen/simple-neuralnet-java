@@ -82,8 +82,10 @@ public class NeuralNet {
 
     /**
      * Classifies new data.
+     *
+     * @param input The input data.
      */
-    public final void classify(final double[][] trainIn) {
+    public final void classify(final double[][] input) {
         //
     }
 
