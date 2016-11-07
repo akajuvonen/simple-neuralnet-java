@@ -72,7 +72,6 @@ public class NeuralNet {
      */
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
-        double[][] hiddenLayer, outputLayer;
         for (int i = 0; i < maxIterations; i++) {
             // Calculate the hidden (middle) layer
             hiddenLayer = sigmoid(multiply(trainIn, weights1));
