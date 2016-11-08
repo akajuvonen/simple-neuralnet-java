@@ -80,7 +80,7 @@ public class NeuralNet {
     /**
      * Classifies new data.
      *
-     * @param input The input data.
+     * @param input The input data
      */
     public final void classify(final double[][] input) {
         hiddenLayer = sigmoid(multiply(input, weights1));
