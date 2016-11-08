@@ -77,7 +77,7 @@ public final class MatrixTools {
         // Check for invalid arguments
         if (x <= 0 || y <= 0) {
             throw new IllegalArgumentException(
-            "Size must consist of positive integers");
+                "Size must consist of positive integers");
         }
         Random r = new Random();
         double[][] randMatrix = new double[x][y];
@@ -143,6 +143,11 @@ public final class MatrixTools {
                                           final double[][] y) {
         int n = x.length;
         int m = x[0].length;
+        // Check that sizes match
+        if (n != y.length || m != y[0].length) {
+            throw new IllegalArgumentException(
+                "Both arrays must be the same shape");
+        }
         double[][] z = new double[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
