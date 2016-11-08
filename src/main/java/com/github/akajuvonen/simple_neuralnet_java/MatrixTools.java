@@ -132,6 +132,13 @@ public final class MatrixTools {
         return y;
     }
 
+    /**
+     * Matrix substraction.
+     *
+     * @param x The first array
+     * @param y The second array
+     * @return x - y
+     */
     public static double[][] substraction(final double[][] x,
                                           final double[][] y) {
         int n = x.length;
