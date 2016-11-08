@@ -112,10 +112,15 @@ public class NeuralNet {
             {0.0},
             {0.0}
         };
+        double[][] testIn = {
+            {1,0,1},
+            {0,1,0},
+            {1,1,1}
+        };
         final int hiddenSize = 4;
         final int maxIterations = 60000;
         NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
             trainIn, trainOut);
-        //net.classify();
+        net.classify(testIn);
     }
 }
