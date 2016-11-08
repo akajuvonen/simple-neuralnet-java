@@ -144,8 +144,8 @@ public final class MatrixTools {
         int n = x.length;
         int m = x[0].length;
         double[][] z = new double[n][m];
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 z[i][j] = x[i][j] - y[i][j];
             }
         }
