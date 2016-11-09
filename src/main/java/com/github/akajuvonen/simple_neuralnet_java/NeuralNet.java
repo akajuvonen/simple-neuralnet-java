@@ -76,7 +76,9 @@ public class NeuralNet {
                             final double[][] trainOut) {
         double[][] outputError, outputAdjustment, hiddenError, hiddenAdjustment;
         for (int i = 0; i < maxIterations; i++) {
+            // Classify data
             classify(trainIn);
+            // Calculate errors and adjustments for hidden and output layer
             outputError = substraction(trainOut, outputLayer);
             outputAdjustment = multiply(outputError,
                                         sigmoidDerivative(outputLayer));

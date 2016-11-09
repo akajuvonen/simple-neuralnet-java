@@ -230,6 +230,9 @@ public class MatrixToolsTest {
         }
     }
 
+    /**
+     * Test that substraction works.
+     */
     @Test
     public void testSubstraction() {
         double[][] a = {
