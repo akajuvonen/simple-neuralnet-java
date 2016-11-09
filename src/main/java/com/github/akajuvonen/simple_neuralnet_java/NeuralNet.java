@@ -74,15 +74,16 @@ public class NeuralNet {
      */
     public final void train(final double[][] trainIn,
                             final double[][] trainOut) {
+        double[][] outputError, outputAdjustment, hiddenError, hiddenAdjustment;
         for (int i = 0; i < maxIterations; i++) {
             classify(trainIn);
-            double[][] outputError = substraction(trainOut, outputLayer);
-            double[][] outputAdjustment = multiply(
-                outputError, sigmoidDerivative(outputLayer));
-            double[][] hiddenError = multiply(
-                outputAdjustment, transpose(weights2));
-            double[][] hiddenAdjustment = multiply(
-                hiddenError, sigmoidDerivative(hiddenLayer));
+            outputError = substraction(trainOut, outputLayer);
+            outputAdjustment = multiply(outputError,
+                                        sigmoidDerivative(outputLayer));
+            hiddenError = multiply(outputAdjustment,
+                                   transpose(weights2));
+            hiddenAdjustment = multiply(hiddenError,
+                                        sigmoidDerivative(hiddenLayer));
         }
     }
 
