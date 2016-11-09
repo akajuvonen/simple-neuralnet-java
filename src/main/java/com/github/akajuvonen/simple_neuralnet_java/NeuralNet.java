@@ -7,6 +7,8 @@ import static com.github.akajuvonen.simple_neuralnet_java.
 import static com.github.akajuvonen.simple_neuralnet_java.
     MatrixTools.transpose;
 import static com.github.akajuvonen.simple_neuralnet_java.
+    MatrixTools.substraction;
+import static com.github.akajuvonen.simple_neuralnet_java.
     SigmoidTools.sigmoid;
 import static com.github.akajuvonen.simple_neuralnet_java.
     SigmoidTools.sigmoidDerivative;
@@ -74,6 +76,13 @@ public class NeuralNet {
                             final double[][] trainOut) {
         for (int i = 0; i < maxIterations; i++) {
             classify(trainIn);
+            double[][] outputError = substraction(trainOut, outputLayer);
+            double[][] outputAdjustment = multiply(
+                outputError, sigmoidDerivative(outputLayer));
+            double[][] hiddenError = multiply(
+                outputAdjustment, transpose(weights2));
+            double[][] hiddenAdjustment = multiply(
+                hiddenError, sigmoidDerivative(hiddenLayer));
         }
     }
 
