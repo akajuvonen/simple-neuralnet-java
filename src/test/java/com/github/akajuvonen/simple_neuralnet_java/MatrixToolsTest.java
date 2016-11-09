@@ -229,4 +229,25 @@ public class MatrixToolsTest {
             assertArrayEquals(expected2[i], actual2[i], 0.0);
         }
     }
+
+    @Test
+    public void testSubstraction() {
+        double[][] a = {
+            {1, 2},
+            {3, 4}
+        };
+        double[][] b = {
+            {5, 6},
+            {7, 8}
+        };
+        double[][] expected = {
+            {-4, -4},
+            {-4, -4}
+        };
+        double[][] actual = MatrixTools.substraction(a,b);
+        // Check the results
+        for (int i = 0; i < expected.length; i++) {
+            assertArrayEquals(expected[i], actual[i], 0.0);
+        }
+    }
 }
