@@ -4,7 +4,7 @@
   <groupId>com.github.akajuvonen.simple_neuralnet_java</groupId>
   <artifactId>neuralnet</artifactId>
   <packaging>jar</packaging>
-  <version>0.3</version>
+  <version>0.8</version>
   <name>neuralnet</name>
   <url>http://maven.apache.org</url>
   <dependencies>
