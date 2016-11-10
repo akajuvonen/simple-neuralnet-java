@@ -156,4 +156,29 @@ public final class MatrixTools {
         }
         return z;
     }
+
+    /**
+     * Matrix addition.
+     *
+     * @param x The first array
+     * @param y The second array
+     * @return x + y
+     */
+    public static double[][] addition(final double[][] x,
+                                          final double[][] y) {
+        int n = x.length;
+        int m = x[0].length;
+        // Check that sizes match
+        if (n != y.length || m != y[0].length) {
+            throw new IllegalArgumentException(
+                "Both arrays must be the same shape");
+        }
+        double[][] z = new double[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                z[i][j] = x[i][j] + y[i][j];
+            }
+        }
+        return z;
+    }
 }
