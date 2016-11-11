@@ -66,7 +66,8 @@ public final class MatrixTools {
     public static double[][] multiply(final double[][] a, final double[][] b) {
         // If both are scalars, perform element-wise multiplication
         if ((a.length == 1 && b.length == 1) || (a[0].length == 1 && b[0].length == 1)) {
-            multiplyElementwise(a, b);
+            double[][] ce = multiplyElementwise(a, b);
+            return ce;
         }
         // If the matrix sizes not suitable for multiplication
         if (a[0].length != b.length) {
