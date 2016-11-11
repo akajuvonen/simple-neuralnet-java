@@ -115,6 +115,9 @@ public class MatrixToolsTest {
         assertEquals(result2[0].length, 3);
     }
 
+    /**
+     * Multiply matrices element-wise test.
+     */
     @Test
     public void testMultiplyElementwise() {
         double[][] a =  {
