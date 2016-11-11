@@ -88,6 +88,9 @@ public class NeuralNet {
                                    transpose(weights2));
             hiddenAdjustment = multiply(hiddenError,
                                         sigmoidDerivative(hiddenLayer));
+            // Perform the weight adjustments
+            weights2 = addition(weights2, multiply(transpose(hiddenLayer),outputAdjustment));
+            weights1 = addition(weights1, multiply(transpose(trainIn),hiddenAdjustment));
         }
     }
 
