@@ -37,13 +37,13 @@ public final class MatrixTools {
     }
 
     /**
-     * Element wise multiplication.
+     * Element-wise multiplication.
      *
      * @param a First array
      * @param b Second array
      * @return The multiplication result
      */
-    public static double[][] multiplyElementwise(final double[][] a, final double[][] b) {
+    private static double[][] multiplyElementwise(final double[][] a, final double[][] b) {
         int n = a.length;
         int m = b[0].length;
         double[][] c = new double[n][m];
@@ -57,13 +57,14 @@ public final class MatrixTools {
 
     /**
      * Matrix multiplication. Takes two array as input.
+     * If both of them are scalars, return element-wise multiplication result.
      *
      * @param a First array
      * @param b Second array
      * @return The resulting matrix
      */
     public static double[][] multiply(final double[][] a, final double[][] b) {
-        // If both are scalars, perform element wise multiplication
+        // If both are scalars, perform element-wise multiplication
         if ((a.length == 1 && b.length == 1) || (a[0].length == 1 && b[0].length == 1)) {
             multiplyElementwise(a, b);
         }
