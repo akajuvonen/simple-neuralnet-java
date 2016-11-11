@@ -115,6 +115,26 @@ public class MatrixToolsTest {
         assertEquals(result2[0].length, 3);
     }
 
+    @Test
+    public void testMultiplyElementwise() {
+        double[][] a =  {
+            {1},
+            {2}
+        };
+        double[][] b =  {
+            {1},
+            {2}
+        };
+        double[][] expected = {
+            {1},
+            {4}
+        };
+        double[][] actual = MatrixTools.multiply(a, b);
+        for (int i = 0; i < expected.length; i++) {
+            assertArrayEquals(expected[i], actual[i], 0.0);
+        }
+    }
+
     /**
      * Test random matrix generation.
      */
