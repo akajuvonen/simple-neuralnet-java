@@ -141,6 +141,9 @@ public class NeuralNet {
         final int maxIterations = 60000;
         NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
             trainIn, trainOut);
-        net.classify(testIn);
+        double[][] result = net.classify(testIn);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i][0]);
+        }
     }
 }
