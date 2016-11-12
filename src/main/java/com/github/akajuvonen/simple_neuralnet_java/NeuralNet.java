@@ -3,6 +3,8 @@ package com.github.akajuvonen.simple_neuralnet_java;
 import static com.github.akajuvonen.simple_neuralnet_java.
     MatrixTools.multiply;
 import static com.github.akajuvonen.simple_neuralnet_java.
+    MatrixTools.multiplyElementwise;
+import static com.github.akajuvonen.simple_neuralnet_java.
     MatrixTools.randomMatrix;
 import static com.github.akajuvonen.simple_neuralnet_java.
     MatrixTools.transpose;
@@ -82,11 +84,11 @@ public class NeuralNet {
             classify(trainIn);
             // Calculate errors and adjustments for hidden and output layer
             outputError = substraction(trainOut, outputLayer);
-            outputAdjustment = multiply(outputError,
+            outputAdjustment = multiplyElementwise(outputError,
                                         sigmoidDerivative(outputLayer));
             hiddenError = multiply(outputAdjustment,
                                    transpose(weights2));
-            hiddenAdjustment = multiply(hiddenError,
+            hiddenAdjustment = multiplyElementwise(hiddenError,
                                         sigmoidDerivative(hiddenLayer));
             // Perform the weight adjustments
             weights2 = addition(weights2, multiply(transpose(hiddenLayer),outputAdjustment));
