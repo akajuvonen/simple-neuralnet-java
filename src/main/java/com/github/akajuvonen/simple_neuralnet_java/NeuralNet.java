@@ -143,7 +143,7 @@ public class NeuralNet {
             trainIn, trainOut);
         double[][] result = net.classify(testIn);
         for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i][0]);
+            System.out.println(Math.round(result[i][0]));
         }
     }
 }
