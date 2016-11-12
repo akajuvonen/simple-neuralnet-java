@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
  * Unit test for neural network.
  *
  * @author Antti Juvonen
- * @version 0.1
+ * @version 1.0
  */
 public class NeuralNetTest {
     /**
