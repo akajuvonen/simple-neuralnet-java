@@ -132,7 +132,7 @@ public class MatrixToolsTest {
             {1},
             {4}
         };
-        double[][] actual = MatrixTools.multiply(a, b);
+        double[][] actual = MatrixTools.multiplyElementwise(a, b);
         for (int i = 0; i < expected.length; i++) {
             assertArrayEquals(expected[i], actual[i], 0.0);
         }
