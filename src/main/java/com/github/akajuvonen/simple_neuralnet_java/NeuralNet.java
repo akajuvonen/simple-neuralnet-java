@@ -142,6 +142,7 @@ public class NeuralNet {
         NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
             trainIn, trainOut);
         double[][] result = net.classify(testIn);
+        System.out.println("The results (should be 1 0 1): ");
         for (int i = 0; i < result.length; i++) {
             System.out.println(Math.round(result[i][0]));
         }
