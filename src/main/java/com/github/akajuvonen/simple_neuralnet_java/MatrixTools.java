@@ -43,7 +43,8 @@ public final class MatrixTools {
      * @param b Second array
      * @return The multiplication result
      */
-    public static double[][] multiplyElementwise(final double[][] a, final double[][] b) {
+    public static double[][] multiplyElementwise(final double[][] a,
+                                                 final double[][] b) {
         int n = a.length;
         int m = b[0].length;
         double[][] c = new double[n][m];
