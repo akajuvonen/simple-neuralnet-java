@@ -3,6 +3,6 @@
  * <p>
  *
  * @author Antti Juvonen
- * @version 0.3
+ * @version 1.0
  */
 package com.github.akajuvonen.simple_neuralnet_java;
