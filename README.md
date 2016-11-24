@@ -1,5 +1,5 @@
 #simple-neuralnet-java
-A simple neural network using Java. Now uses Maven build system (which means it has to be installed).
+A simple MLP neural network using Java. Now uses Maven build system (which means it has to be installed).
 
 ##Compiling & packaging
 You can check that the compile process works by typing `mvn compile`.
