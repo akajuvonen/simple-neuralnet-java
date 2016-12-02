@@ -139,6 +139,28 @@ public class MatrixToolsTest {
     }
 
     /**
+     * Multiply matrix with a scalar test.
+     */
+    @Test
+    public void testMultiplyElementwiseScalar() {
+        double[][] a = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+        double[][] b = {
+            {2}
+        };
+        double[][] expected = {
+            {2, 4, 6},
+            {8, 10 , 12}
+        };
+        double[][] actual = MatrixTools.multiply(a, b);
+        for (int i = 0; i < expected.length; i++) {
+            assertArrayEquals(expected[i], actual[i], 0.0);
+        }
+    }
+
+    /**
      * Test random matrix generation.
      */
     @Test
