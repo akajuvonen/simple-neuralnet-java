@@ -36,6 +36,19 @@ public final class MatrixTools {
         return true;
     }
 
+    public static double[][] multiplyElementwise(final double[][] a,
+                                                 final double b) {
+        int n = a.length;
+        int m = a[0].length;
+        double[][] c = new double[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                c[i][j] = a[i][j] * b;
+            }
+        }
+        return c;
+    }
+
     /**
      * Element-wise multiplication.
      *
