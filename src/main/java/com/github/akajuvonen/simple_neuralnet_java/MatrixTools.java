@@ -36,6 +36,13 @@ public final class MatrixTools {
         return true;
     }
 
+    /**
+     * Multiply a matrix and scalar.
+     *
+     * @param a The matrix
+     * @param b The scalar to multiply with
+     * @return The resulting matrix
+     */
     public static double[][] multiplyElementwise(final double[][] a,
                                                  final double b) {
         int n = a.length;
