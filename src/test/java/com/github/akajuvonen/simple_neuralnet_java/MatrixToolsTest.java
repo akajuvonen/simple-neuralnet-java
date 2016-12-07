@@ -139,6 +139,24 @@ public class MatrixToolsTest {
     }
 
     /**
+     * Test element-wise multiplication size mismatch.
+     */
+    @Test
+    public void testMultiplyElementwiseSizeError() {
+        // Is the exception raised
+        boolean raised = false;
+        double[][] a = new double[4][3];
+        // Array b is different size
+        double[][] b = new double[4][4];
+        try {
+            double[][] result = MatrixTools.multiplyElementwise(a,b);
+        } catch (IllegalArgumentException e) {
+            raised = true;
+        }
+        assertTrue(raised);
+    }
+
+    /**
      * Multiply matrix with a scalar test.
      */
     @Test
