@@ -66,6 +66,10 @@ public final class MatrixTools {
     public static double[][] multiplyElementwise(final double[][] a,
                                                  final double[][] b) {
         // TODO: Input check here, matrices have to be the same size
+        if (a.length != b.length || a[0].length != b[0].length) {
+            throw new IllegalArgumentException(
+            "Array sizes must be the same for element-wise multiplication");
+        }
         int n = a.length;
         int m = b[0].length;
         double[][] c = new double[n][m];
