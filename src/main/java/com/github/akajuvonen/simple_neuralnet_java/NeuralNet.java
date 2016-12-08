@@ -48,6 +48,11 @@ public class NeuralNet {
      * The output layer (results).
      */
     private double[][] outputLayer;
+    /**
+     * The rate at which the network learns. Can make results more
+     * accurate, but also learning slower.
+     */
+    private double learningRate;
 
     /**
      * The NeuralNet class constructor.
@@ -62,6 +67,7 @@ public class NeuralNet {
         final double[][] trainIn, final double[][] trainOut) {
         hiddenSize = hidSize;
         maxIterations = maxIter;
+        learningRate = 0.15;
         // Init weights randomly
         weights1 = randomMatrix(trainIn[0].length, hiddenSize);
         weights2 = randomMatrix(hiddenSize, trainOut[0].length);
@@ -88,8 +94,9 @@ public class NeuralNet {
                                         sigmoidDerivative(outputLayer));
             hiddenError = multiply(outputAdjustment,
                                    transpose(weights2));
-            hiddenAdjustment = multiplyElementwise(hiddenError,
-                                        sigmoidDerivative(hiddenLayer));
+            hiddenAdjustment = multiplyElementwise(
+                multiplyElementwise(hiddenError,learningRate),
+                sigmoidDerivative(hiddenLayer));
             // Perform the weight adjustments
             weights2 = addition(weights2, multiply(transpose(hiddenLayer),
                                                    outputAdjustment));
