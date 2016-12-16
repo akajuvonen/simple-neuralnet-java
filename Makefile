@@ -1,5 +1,6 @@
 init:
-	wget https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+	mkdir data
+	wget https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data -P data/
 
 clean:
-	rm -v iris.data
+	rm -rv data/iris.data
