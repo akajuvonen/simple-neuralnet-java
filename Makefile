@@ -6,4 +6,4 @@ iris:
 	java -cp target/neuralnet-1.0.jar com.github.akajuvonen.simple_neuralnet_java.IrisAnalysis
 
 clean:
-	rm -rv data/iris.data
+	rm -rv data/
