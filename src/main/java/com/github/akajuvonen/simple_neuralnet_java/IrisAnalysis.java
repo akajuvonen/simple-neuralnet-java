@@ -12,4 +12,8 @@ public class IrisAnalysis {
     public IrisAnalysis() {
         System.out.println("Iris");
     }
+
+    public static void main(final String[] args) {
+        IrisAnalysis iris = new IrisAnalysis();
+    }
 }
