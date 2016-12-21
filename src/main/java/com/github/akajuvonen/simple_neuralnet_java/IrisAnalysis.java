@@ -9,11 +9,11 @@ import com.github.akajuvonen.simple_neuralnet_java.NeuralNet;
  * @version 0.1
  */
 public class IrisAnalysis {
-    public IrisAnalysis(String filename) {
+    public IrisAnalysis(final String filename) {
         parseCSV(filename);
     }
 
-    private void parseCSV(String filename) {
+    private void parseCSV(final String filename) {
         //
     }
 
