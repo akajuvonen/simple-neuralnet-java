@@ -95,7 +95,7 @@ public class NeuralNet {
             hiddenError = multiply(outputAdjustment,
                                    transpose(weights2));
             hiddenAdjustment = multiplyElementwise(
-                multiplyElementwise(hiddenError,learningRate),
+                multiplyElementwise(hiddenError, learningRate),
                 sigmoidDerivative(hiddenLayer));
             // Perform the weight adjustments
             weights2 = addition(weights2, multiply(transpose(hiddenLayer),
