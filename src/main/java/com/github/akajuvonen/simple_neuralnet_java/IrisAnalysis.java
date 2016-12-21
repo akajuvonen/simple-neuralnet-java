@@ -3,7 +3,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
 import com.github.akajuvonen.simple_neuralnet_java.NeuralNet;
 
 /**
- * Iris data analysis test class.
+ * Iris data analysis class.
  *
  * @author Antti Juvonen
  * @version 0.1
