@@ -62,6 +62,7 @@ public class NeuralNet {
      * @param maxIter After how many iterations stop the training
      * @param trainIn Training data inputs
      * @param trainOut Training data expected outputs
+     * @param learnRate How fast the network learns, e.g., 0.15
      */
     public NeuralNet(final int hidSize, final int maxIter,
         final double[][] trainIn, final double[][] trainOut,
