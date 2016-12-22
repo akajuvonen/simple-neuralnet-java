@@ -40,8 +40,9 @@ public class NeuralNetTest {
         };
         final int hiddenSize = 4;
         final int maxIterations = 60000;
+        final double learningRate = 0.15;
         NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
-            trainIn, trainOut);
+            trainIn, trainOut, learningRate);
         double[][] result = net.classify(testIn);
         // Expected results
         double[] expected = {1, 0, 1};
