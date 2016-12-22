@@ -64,10 +64,11 @@ public class NeuralNet {
      * @param trainOut Training data expected outputs
      */
     public NeuralNet(final int hidSize, final int maxIter,
-        final double[][] trainIn, final double[][] trainOut) {
+        final double[][] trainIn, final double[][] trainOut,
+        final double learnRate) {
         hiddenSize = hidSize;
         maxIterations = maxIter;
-        learningRate = 0.15;
+        learningRate = learnRate;
         // Init weights randomly
         weights1 = randomMatrix(trainIn[0].length, hiddenSize);
         weights2 = randomMatrix(hiddenSize, trainOut[0].length);
@@ -148,8 +149,9 @@ public class NeuralNet {
         };
         final int hiddenSize = 4;
         final int maxIterations = 60000;
+        final double learningRate = 0.15;
         NeuralNet net = new NeuralNet(hiddenSize, maxIterations,
-            trainIn, trainOut);
+            trainIn, trainOut, learningRate);
         double[][] result = net.classify(testIn);
         System.out.println("The results (should be 1 0 1): ");
         for (int i = 0; i < result.length; i++) {
