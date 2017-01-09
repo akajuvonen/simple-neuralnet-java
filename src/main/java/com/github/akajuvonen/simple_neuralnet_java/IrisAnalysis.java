@@ -1,5 +1,9 @@
 package com.github.akajuvonen.simple_neuralnet_java;
 
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
+
 /**
  * Iris data analysis class.
  *
