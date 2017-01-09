@@ -26,7 +26,8 @@ public class IrisAnalysis {
      * @param filename Path to iris data csv file
      */
     private void parseCSV(final String filename) {
-        //
+        FileReader fr = new FileReader(filename);
+        BufferedReader br = new BufferedReader(fr);
     }
 
     /**
