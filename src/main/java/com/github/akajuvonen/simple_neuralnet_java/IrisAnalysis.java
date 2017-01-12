@@ -3,6 +3,7 @@ package com.github.akajuvonen.simple_neuralnet_java;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 
 /**
  * Iris data analysis class.
@@ -26,8 +27,13 @@ public class IrisAnalysis {
      * @param filename Path to iris data csv file
      */
     private void parseCSV(final String filename) {
-        FileReader fr = new FileReader(filename);
-        BufferedReader br = new BufferedReader(fr);
+        try {
+            FileReader fr = new FileReader(filename);
+            BufferedReader br = new BufferedReader(fr);
+        }
+        catch(FileNotFoundException e) {
+            System.out.println("File not found");
+        }
     }
 
     /**
