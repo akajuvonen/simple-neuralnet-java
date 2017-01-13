@@ -29,10 +29,13 @@ public class IrisAnalysis {
         try {
             FileReader fr = new FileReader(filename);
             BufferedReader br = new BufferedReader(fr);
+            // For now just prints line by line
             for (String line = br.readLine(); line != null; line = br.readLine()) {
                 System.out.println(line);
             }
         }
+        // IO Exception includes errors if file not found, as well as
+        // problems with reading a new line from the file
         catch(IOException e) {
             System.out.println("File not found or can't read line");
         }
