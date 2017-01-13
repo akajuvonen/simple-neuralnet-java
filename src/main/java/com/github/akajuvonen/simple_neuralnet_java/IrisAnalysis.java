@@ -3,7 +3,6 @@ package com.github.akajuvonen.simple_neuralnet_java;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 
 /**
  * Iris data analysis class.
@@ -30,8 +29,11 @@ public class IrisAnalysis {
         try {
             FileReader fr = new FileReader(filename);
             BufferedReader br = new BufferedReader(fr);
+            for (String line = br.readLine(); line != null; line = br.readLine()) {
+                System.out.println(line);
+            }
         }
-        catch(FileNotFoundException e) {
+        catch(IOException e) {
             System.out.println("File not found (did you run \"make init\"?)");
         }
     }
