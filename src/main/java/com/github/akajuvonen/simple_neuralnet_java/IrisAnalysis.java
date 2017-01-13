@@ -32,7 +32,7 @@ public class IrisAnalysis {
             BufferedReader br = new BufferedReader(fr);
         }
         catch(FileNotFoundException e) {
-            System.out.println("File not found");
+            System.out.println("File not found (did you run \"make init\"?)");
         }
     }
 
