@@ -34,7 +34,7 @@ public class IrisAnalysis {
             }
         }
         catch(IOException e) {
-            System.out.println("File not found (did you run \"make init\"?)");
+            System.out.println("File not found or can't read line");
         }
     }
 
