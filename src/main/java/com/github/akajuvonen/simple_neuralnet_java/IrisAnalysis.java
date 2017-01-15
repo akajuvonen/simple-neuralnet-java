@@ -26,11 +26,13 @@ public class IrisAnalysis {
      * @param filename Path to iris data csv file
      */
     private void parseCSV(final String filename) {
+        String line;
+        String splitline;
         try {
             FileReader fr = new FileReader(filename);
             BufferedReader br = new BufferedReader(fr);
             // For now just prints line by line
-            for (String line = br.readLine(); line != null;
+            for (line = br.readLine(); line != null;
                  line = br.readLine()) {
                 System.out.println(line);
             }
