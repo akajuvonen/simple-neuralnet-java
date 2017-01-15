@@ -12,11 +12,16 @@ import java.io.BufferedReader;
  */
 public class IrisAnalysis {
     /**
+     * The separator used in CSV file splitting
+     */
+    private String separator;
+    /**
      * Iris data analysis constructor.
      *
      * @param filename Path to iris data csv file
      */
     public IrisAnalysis(final String filename) {
+        separator = ",";
         parseCSV(filename);
     }
 
@@ -36,7 +41,7 @@ public class IrisAnalysis {
                  line = br.readLine()) {
                 System.out.println(line);
                 // Split the line into tokens using the separator
-                splitline = line.split(",");
+                splitline = line.split(separator);
             }
         } catch (IOException e) {
             // IO Exception includes errors if file not found, as well as
