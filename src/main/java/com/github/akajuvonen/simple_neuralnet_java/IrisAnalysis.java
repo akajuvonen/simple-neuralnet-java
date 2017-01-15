@@ -27,7 +27,7 @@ public class IrisAnalysis {
      */
     private void parseCSV(final String filename) {
         String line;
-        String splitline;
+        String[] splitline;
         try {
             FileReader fr = new FileReader(filename);
             BufferedReader br = new BufferedReader(fr);
@@ -35,6 +35,8 @@ public class IrisAnalysis {
             for (line = br.readLine(); line != null;
                  line = br.readLine()) {
                 System.out.println(line);
+                // Split the line into tokens using the separator
+                splitline = line.split(",");
             }
         } catch (IOException e) {
             // IO Exception includes errors if file not found, as well as
