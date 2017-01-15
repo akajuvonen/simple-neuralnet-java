@@ -39,9 +39,11 @@ public class IrisAnalysis {
             // For now just prints line by line
             for (line = br.readLine(); line != null;
                  line = br.readLine()) {
-                System.out.println(line);
                 // Split the line into tokens using the separator
                 splitline = line.split(separator);
+                for(int i = 0; i < splitline.length; i++) {
+                    System.out.println(splitline[i]);
+                }
             }
         } catch (IOException e) {
             // IO Exception includes errors if file not found, as well as
