@@ -12,7 +12,7 @@ import java.io.BufferedReader;
  */
 public class IrisAnalysis {
     /**
-     * The separator used in CSV file splitting
+     * The separator used in CSV file splitting.
      */
     private String separator;
     /**
