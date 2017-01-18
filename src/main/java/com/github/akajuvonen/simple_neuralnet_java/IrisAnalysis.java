@@ -8,7 +8,7 @@ import java.io.BufferedReader;
  * Iris data analysis class.
  *
  * @author Antti Juvonen
- * @version 0.1
+ * @version 0.3
  */
 public class IrisAnalysis {
     /**
