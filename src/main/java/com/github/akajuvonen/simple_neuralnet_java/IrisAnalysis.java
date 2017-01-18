@@ -20,8 +20,8 @@ public class IrisAnalysis {
      *
      * @param filename Path to iris data csv file
      */
-    public IrisAnalysis(final String filename) {
-        separator = ",";
+    public IrisAnalysis(final String filename, final String separator) {
+        this.separator = separator;
         parseCSV(filename);
     }
 
@@ -59,6 +59,6 @@ public class IrisAnalysis {
      */
     public static void main(final String[] args) {
         String filename = "data/iris.data";
-        IrisAnalysis iris = new IrisAnalysis(filename);
+        IrisAnalysis iris = new IrisAnalysis(filename, ",");
     }
 }
