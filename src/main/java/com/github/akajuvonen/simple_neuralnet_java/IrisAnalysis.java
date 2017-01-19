@@ -15,9 +15,21 @@ public class IrisAnalysis {
      * The separator used in CSV file splitting.
      */
     private String separator;
+    /**
+     * Training data inputs.
+     */
     private double [][] trainIn;
+    /**
+     * Training data outputs.
+     */
     private double [][] trainOut;
+    /**
+     * Testing data inputs.
+     */
     private double [][] testIn;
+    /**
+     * Testing data outputs.
+     */
     private double [][] testOut;
     /**
      * Iris data analysis constructor.
