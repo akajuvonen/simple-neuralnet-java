@@ -18,19 +18,19 @@ public class IrisAnalysis {
     /**
      * Training data inputs.
      */
-    private double [][] trainIn;
+    private double[][] trainIn;
     /**
      * Training data outputs.
      */
-    private double [][] trainOut;
+    private double[][] trainOut;
     /**
      * Testing data inputs.
      */
-    private double [][] testIn;
+    private double[][] testIn;
     /**
      * Testing data outputs.
      */
-    private double [][] testOut;
+    private double[][] testOut;
     /**
      * Iris data analysis constructor.
      *
