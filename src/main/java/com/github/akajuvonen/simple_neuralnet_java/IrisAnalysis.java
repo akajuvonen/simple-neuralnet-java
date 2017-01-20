@@ -81,7 +81,8 @@ public class IrisAnalysis {
                         parsed[i][4] = 2;
                         break;
                     default:
-                        throw new IllegalArgumentException("Invalid flower name" + flower);
+                        throw new IllegalArgumentException(
+                            "Invalid flower name" + flower);
                 }
                 i++;
             }
