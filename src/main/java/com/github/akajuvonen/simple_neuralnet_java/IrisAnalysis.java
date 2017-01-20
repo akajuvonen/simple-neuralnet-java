@@ -59,6 +59,7 @@ public class IrisAnalysis {
             // For now just prints line by line
             for (line = br.readLine(); line != null;
                  line = br.readLine()) {
+                System.out.println(i);
                 // Split the line into tokens using the separator
                 splitline = line.split(separator);
                 /** Parse the measured values to string, then convert to double
@@ -66,6 +67,21 @@ public class IrisAnalysis {
                 String[] inputString = Arrays.copyOfRange(splitline, 0, 4);
                 for (int j = 0; j < inputString.length; j++) {
                     parsed[i][j] = Double.parseDouble(inputString[j]);
+                }
+                // Parse the flower name (String) into an integer for neuralnet
+                String flower = splitline[4];
+                switch (flower) {
+                    case "Iris-setosa":
+                        parsed[i][4] = 0;
+                        break;
+                    case "Iris-versicolor":
+                        parsed[i][4] = 1;
+                        break;
+                    case "Iris-virginica":
+                        parsed[i][4] = 2;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Invalid flower name" + flower);
                 }
                 i++;
             }
