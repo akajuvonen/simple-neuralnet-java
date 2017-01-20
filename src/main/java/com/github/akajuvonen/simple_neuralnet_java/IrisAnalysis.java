@@ -67,6 +67,7 @@ public class IrisAnalysis {
                 for (int j = 0; j < inputString.length; j++) {
                     parsed[i][j] = Double.parseDouble(inputString[j]);
                 }
+                i++;
             }
         } catch (IOException e) {
             // IO Exception includes errors if file not found, as well as
