@@ -40,7 +40,7 @@ public class IrisAnalysis {
      */
     public IrisAnalysis(final String filename, final String separ) {
         separator = separ;
-        parseCSV(filename);
+        double[][] parsed = parseCSV(filename);
     }
 
     /**
@@ -48,7 +48,7 @@ public class IrisAnalysis {
      *
      * @param filename Path to iris data csv file
      */
-    private void parseCSV(final String filename) {
+    private double[][] parseCSV(final String filename) {
         String line;
         String[] splitline;
         double[][] parsed = new double[150][5];
@@ -91,6 +91,7 @@ public class IrisAnalysis {
             // problems with reading a new line from the file
             System.out.println("File not found or can't read line");
         }
+        return parsed;
     }
 
     /**
