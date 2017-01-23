@@ -50,36 +50,38 @@ public class IrisAnalysis {
      * @return Iris data parsed into a double[][] array
      */
     private double[][] parseCSV(final String filename) {
+        final int irisRows = 150;
+        final int irisColumns = 5;
         String line;
         String[] splitline;
-        double[][] parsed = new double[150][5];
+        double[][] parsed = new double[irisRows][irisColumns];
         try {
             FileReader fr = new FileReader(filename);
             BufferedReader br = new BufferedReader(fr);
             int i = 0;
             // For now just prints line by line
-            for (line = br.readLine(); i < 150;
+            for (line = br.readLine(); i < irisRows;
                  line = br.readLine()) {
                 System.out.println("Line: " + line);
                 // Split the line into tokens using the separator
                 splitline = line.split(separator);
                 /** Parse the measured values to string, then convert to double
                 and insert to parsed output array. */
-                String[] inputString = Arrays.copyOfRange(splitline, 0, 4);
+                String[] inputString = Arrays.copyOfRange(splitline, 0, irisColumns - 1);
                 for (int j = 0; j < inputString.length; j++) {
                     parsed[i][j] = Double.parseDouble(inputString[j]);
                 }
                 // Parse the flower name (String) into a number for neuralnet
-                String flower = splitline[4];
+                String flower = splitline[irisColumns - 1];
                 switch (flower) {
                     case "Iris-setosa":
-                        parsed[i][4] = 0;
+                        parsed[i][irisColumns - 1] = 0;
                         break;
                     case "Iris-versicolor":
-                        parsed[i][4] = 1;
+                        parsed[i][irisColumns - 1] = 1;
                         break;
                     case "Iris-virginica":
-                        parsed[i][4] = 2;
+                        parsed[i][irisColumns - 1] = 2;
                         break;
                     default:
                         throw new IllegalArgumentException(
