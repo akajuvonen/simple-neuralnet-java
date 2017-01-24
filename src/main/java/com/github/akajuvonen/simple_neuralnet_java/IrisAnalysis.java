@@ -67,7 +67,8 @@ public class IrisAnalysis {
                 splitline = line.split(separator);
                 /** Parse the measured values to string, then convert to double
                 and insert to parsed output array. */
-                String[] inputString = Arrays.copyOfRange(splitline, 0, irisColumns - 1);
+                String[] inputString = Arrays.copyOfRange(splitline, 0,
+                                                          irisColumns - 1);
                 for (int j = 0; j < inputString.length; j++) {
                     parsed[i][j] = Double.parseDouble(inputString[j]);
                 }
