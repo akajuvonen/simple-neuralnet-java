@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Arrays;
 import java.util.stream.IntStream;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Iris data analysis class.
@@ -102,6 +104,10 @@ public class IrisAnalysis {
     public void shuffleData(double[][] data) {
         // Create a range of indexes to be shuffled
         int[] idx = IntStream.range(0, data.length).toArray();
+        // Convert to list
+        List idxList = Arrays.asList(idx);
+        // Shuffle the list
+        Collections.shuffle(idxList);
     }
 
     /**
