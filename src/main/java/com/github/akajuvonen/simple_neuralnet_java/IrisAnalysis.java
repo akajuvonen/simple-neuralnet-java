@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * Iris data analysis class.
@@ -96,6 +97,11 @@ public class IrisAnalysis {
             System.out.println("File not found or can't read line");
         }
         return parsed;
+    }
+
+    public void shuffleData(double[][] data) {
+        // Create a range of indexes to be shuffled
+        int[] idx = IntStream.range(0, data.length).toArray();
     }
 
     /**
