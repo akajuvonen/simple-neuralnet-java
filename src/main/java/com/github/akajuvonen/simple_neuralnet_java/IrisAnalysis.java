@@ -101,8 +101,13 @@ public class IrisAnalysis {
         return parsed;
     }
 
+    /**
+     * Shuffles the test data and splits into train and test data.
+     *
+     * @param data The data array to be shuffled and split
+     */
     public void shuffleData(double[][] data) {
-        // Create a range of indexes to be shuffled
+        // Create a range of indices to be shuffled
         int[] idx = IntStream.range(0, data.length).toArray();
         // Convert to list
         List idxList = Arrays.asList(idx);
