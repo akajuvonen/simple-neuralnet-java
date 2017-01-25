@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Arrays;
 import java.util.stream.IntStream;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Iris data analysis class.
@@ -44,6 +42,7 @@ public class IrisAnalysis {
     public IrisAnalysis(final String filename, final String separ) {
         separator = separ;
         double[][] parsed = parseCSV(filename);
+        shuffleData(parsed);
     }
 
     /**
@@ -65,7 +64,6 @@ public class IrisAnalysis {
             // For now just prints line by line
             for (line = br.readLine(); i < irisRows;
                  line = br.readLine()) {
-                System.out.println("Line: " + line);
                 // Split the line into tokens using the separator
                 splitline = line.split(separator);
                 /** Parse the measured values to string, then convert to double
@@ -109,10 +107,9 @@ public class IrisAnalysis {
     public void shuffleData(double[][] data) {
         // Create a range of indices to be shuffled
         int[] idx = IntStream.range(0, data.length).toArray();
-        // Convert to list
-        List idxList = Arrays.asList(idx);
-        // Shuffle the list
-        Collections.shuffle(idxList);
+        for (int i = 0; i < idx.length; i++) {
+            System.out.println(idx[i]);
+        }
     }
 
     /**
