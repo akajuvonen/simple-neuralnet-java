@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Arrays;
 import java.util.stream.IntStream;
+import java.util.Random;
 
 /**
  * Iris data analysis class.
@@ -106,8 +107,18 @@ public class IrisAnalysis {
      * @param data The data array to be shuffled and split
      */
     private void shuffleData(double[][] data) {
+        Random rand = new Random();
         // Create a range of indices to be shuffled
         int[] idx = IntStream.range(0, data.length).toArray();
+        // Shuffle
+        for (int i = idx.length - 1; i > 0; i--) {
+            // Get a random integer j so that 0 <= j <= i
+            int j = rand.nextInt(i + 1);
+            // Swap indices i and j
+            int temp = idx[j];
+            idx[j] = idx[i];
+            idx[i] = temp;
+        }
     }
 
     /**
