@@ -106,7 +106,7 @@ public class IrisAnalysis {
      *
      * @param data The data array to be shuffled and split
      */
-    private void shuffleData(double[][] data) {
+    private void shuffleData(final double[][] data) {
         Random rand = new Random();
         // Shuffle data
         for (int i = data.length - 1; i > 0; i--) {
