@@ -101,6 +101,7 @@ public class IrisAnalysis {
 
     /**
      * Shuffles the test data and splits into train and test data.
+     * Uses the Fisher-Yates algorithm.
      *
      * @param data The data array to be shuffled and split
      */
