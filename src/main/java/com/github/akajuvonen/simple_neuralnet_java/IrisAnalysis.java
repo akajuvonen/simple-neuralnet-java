@@ -108,9 +108,6 @@ public class IrisAnalysis {
     private void shuffleData(double[][] data) {
         // Create a range of indices to be shuffled
         int[] idx = IntStream.range(0, data.length).toArray();
-        for (int i = 0; i < idx.length; i++) {
-            System.out.println(idx[i]);
-        }
     }
 
     /**
