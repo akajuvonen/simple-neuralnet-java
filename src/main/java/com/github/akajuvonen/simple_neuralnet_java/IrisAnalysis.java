@@ -104,7 +104,7 @@ public class IrisAnalysis {
      *
      * @param data The data array to be shuffled and split
      */
-    public void shuffleData(double[][] data) {
+    private void shuffleData(double[][] data) {
         // Create a range of indices to be shuffled
         int[] idx = IntStream.range(0, data.length).toArray();
         for (int i = 0; i < idx.length; i++) {
