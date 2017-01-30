@@ -42,7 +42,7 @@ public class IrisAnalysis {
     public IrisAnalysis(final String filename, final String separ) {
         separator = separ;
         double[][] parsed = parseCSV(filename);
-        shuffleData(parsed);
+        double[][] shuffled = shuffleData(parsed);
     }
 
     /**
@@ -105,7 +105,7 @@ public class IrisAnalysis {
      *
      * @param data The data array to be shuffled and split
      */
-    private void shuffleData(final double[][] data) {
+    private double[][] shuffleData(final double[][] data) {
         Random rand = new Random();
         // Shuffle data
         for (int i = data.length - 1; i > 0; i--) {
@@ -116,6 +116,7 @@ public class IrisAnalysis {
             data[j] = data[i];
             data[i] = temp;
         }
+        return data;
     }
 
     /**
