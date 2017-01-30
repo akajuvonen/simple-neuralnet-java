@@ -104,6 +104,7 @@ public class IrisAnalysis {
      * Uses the Fisher-Yates algorithm.
      *
      * @param data The data array to be shuffled and split
+     * @return Shuffled data matrix
      */
     private double[][] shuffleData(final double[][] data) {
         Random rand = new Random();
