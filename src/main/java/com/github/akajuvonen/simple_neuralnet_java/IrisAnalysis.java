@@ -14,10 +14,6 @@ import java.util.Random;
  */
 public class IrisAnalysis {
     /**
-     * The separator used in CSV file splitting.
-     */
-    private String separator;
-    /**
      * Training data inputs.
      */
     private double[][] trainIn;
@@ -39,9 +35,8 @@ public class IrisAnalysis {
      * @param filename Path to iris data csv file
      * @param separ A string character used to split csv line into tokens
      */
-    public IrisAnalysis(final String filename, final String separ) {
-        separator = separ;
-        double[][] parsed = parseCSV(filename);
+    public IrisAnalysis(final String filename, final String separator) {
+        double[][] parsed = parseCSV(filename, separator);
         double[][] shuffled = shuffleData(parsed);
     }
 
@@ -51,7 +46,7 @@ public class IrisAnalysis {
      * @param filename Path to iris data csv file
      * @return Iris data parsed into a double[][] array
      */
-    private double[][] parseCSV(final String filename) {
+    private double[][] parseCSV(final String filename, String separator) {
         final int irisRows = 150;
         final int irisColumns = 5;
         String line;
