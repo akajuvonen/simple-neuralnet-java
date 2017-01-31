@@ -38,6 +38,7 @@ public class IrisAnalysis {
     public IrisAnalysis(final String filename, final String separator) {
         double[][] parsed = parseCSV(filename, separator);
         double[][] shuffled = shuffleData(parsed);
+        splitData(shuffled);
     }
 
     /**
@@ -113,6 +114,15 @@ public class IrisAnalysis {
             data[i] = temp;
         }
         return data;
+    }
+
+    /**
+     * Splits the shuffled data into training and testing inputs and outputs.
+     *
+     * @param data The data matrix
+     */
+    private void splitData(double[][] data) {
+        //
     }
 
     /**
