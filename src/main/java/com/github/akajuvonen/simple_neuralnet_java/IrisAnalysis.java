@@ -138,6 +138,7 @@ public class IrisAnalysis {
                 for(int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
+                trainOut[i][0] = data[i][data[i].length - 1];
             }
         }
     }
