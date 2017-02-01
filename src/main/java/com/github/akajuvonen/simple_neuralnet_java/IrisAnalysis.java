@@ -14,6 +14,14 @@ import java.util.Random;
  */
 public class IrisAnalysis {
     /**
+     * Iris data row count.
+     */
+    private final int irisRows = 150;
+    /**
+     * Iris data column count.
+     */
+    private final int irisColumns = 5;
+    /**
      * Training data inputs.
      */
     private double[][] trainIn;
@@ -48,8 +56,6 @@ public class IrisAnalysis {
      * @return Iris data parsed into a double[][] array
      */
     private double[][] parseCSV(final String filename, String separator) {
-        final int irisRows = 150;
-        final int irisColumns = 5;
         String line;
         String[] splitline;
         double[][] parsed = new double[irisRows][irisColumns];
@@ -122,7 +128,15 @@ public class IrisAnalysis {
      * @param data The data matrix
      */
     private void splitData(double[][] data) {
-        //
+        /**
+        for (int i = 0; i < data.length; i++) {
+            if (i < data.length/2) {
+                for(int j = 0; j < data[i].length; j++) {
+                    trainIn[i][j] = data[i][j];
+                }
+            }
+        }
+        */
     }
 
     /**
