@@ -134,15 +134,12 @@ public class IrisAnalysis {
      */
     private void splitData(double[][] data) {
         for (int i = 0; i < data.length; i++) {
-            // First half is training data
             if (i < data.length / 2) {
                 for (int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
                 trainOut[i][0] = data[i][data[i].length - 1];
-            }
-            // Second half is test data
-            else {
+            } else {
                 // Test data index (starts from zero)
                 int k = i - (data.length / 2);
                 for (int j = 0; j < data[i].length - 1; j++) {
