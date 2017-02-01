@@ -61,7 +61,7 @@ public class IrisAnalysis {
      * @param separator A separator string used to split lines into tokens
      * @return Iris data parsed into a double[][] array
      */
-    private double[][] parseCSV(final String filename, String separator) {
+    private double[][] parseCSV(final String filename, final String separator) {
         String line;
         String[] splitline;
         double[][] parsed = new double[irisRows][irisColumns];
@@ -133,7 +133,7 @@ public class IrisAnalysis {
      *
      * @param data The data matrix
      */
-    private void splitData(double[][] data) {
+    private void splitData(final double[][] data) {
         for (int i = 0; i < data.length; i++) {
             if (i < data.length / 2) {
                 for (int j = 0; j < data[i].length - 1; j++) {
