@@ -58,6 +58,7 @@ public class IrisAnalysis {
      * Iris data CSV parser.
      *
      * @param filename Path to iris data csv file
+     * @param separator A separator string used to split lines into tokens
      * @return Iris data parsed into a double[][] array
      */
     private double[][] parseCSV(final String filename, String separator) {
