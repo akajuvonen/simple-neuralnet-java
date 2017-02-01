@@ -45,10 +45,10 @@ public class IrisAnalysis {
      */
     public IrisAnalysis(final String filename, final String separator) {
         // Init train and test data with correct sizes
-        trainIn = new double[irisRows/2][irisColumns-1];
-        trainOut = new double[irisRows/2][1];
-        testIn = new double[irisRows-(irisRows/2)][irisColumns-1];
-        testOut = new double[irisRows-(irisRows/2)][1];
+        trainIn = new double[irisRows / 2][irisColumns - 1];
+        trainOut = new double[irisRows / 2][1];
+        testIn = new double[irisRows - (irisRows / 2)][irisColumns - 1];
+        testOut = new double[irisRows - (irisRows / 2)][1];
         double[][] parsed = parseCSV(filename, separator);
         double[][] shuffled = shuffleData(parsed);
         splitData(shuffled);
@@ -135,8 +135,8 @@ public class IrisAnalysis {
     private void splitData(double[][] data) {
         for (int i = 0; i < data.length; i++) {
             // First half is training data
-            if (i < data.length/2) {
-                for(int j = 0; j < data[i].length - 1; j++) {
+            if (i < data.length / 2) {
+                for (int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
                 trainOut[i][0] = data[i][data[i].length - 1];
@@ -144,8 +144,8 @@ public class IrisAnalysis {
             // Second half is test data
             else {
                 // Test data index (starts from zero)
-                int k = i - (data.length/2);
-                for(int j = 0; j < data[i].length - 1; j++) {
+                int k = i - (data.length / 2);
+                for (int j = 0; j < data[i].length - 1; j++) {
                     testIn[k][j] = data[i][j];
                 }
                 testOut[k][0] = data[i][data[i].length - 1];
