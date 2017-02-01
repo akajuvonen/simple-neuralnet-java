@@ -133,15 +133,13 @@ public class IrisAnalysis {
      * @param data The data matrix
      */
     private void splitData(double[][] data) {
-        /**
         for (int i = 0; i < data.length; i++) {
             if (i < data.length/2) {
-                for(int j = 0; j < data[i].length; j++) {
+                for(int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
             }
         }
-        */
     }
 
     /**
