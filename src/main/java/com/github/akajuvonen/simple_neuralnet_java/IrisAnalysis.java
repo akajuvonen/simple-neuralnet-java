@@ -41,7 +41,7 @@ public class IrisAnalysis {
      * Iris data analysis constructor.
      *
      * @param filename Path to iris data csv file
-     * @param separ A string character used to split csv line into tokens
+     * @param separator A string character used to split csv line into tokens
      */
     public IrisAnalysis(final String filename, final String separator) {
         // Init train and test data with correct sizes
