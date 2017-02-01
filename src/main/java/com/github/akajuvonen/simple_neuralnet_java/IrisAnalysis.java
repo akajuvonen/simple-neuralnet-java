@@ -44,6 +44,11 @@ public class IrisAnalysis {
      * @param separ A string character used to split csv line into tokens
      */
     public IrisAnalysis(final String filename, final String separator) {
+        // Init train and test data with correct sizes
+        trainIn = new double[irisRows/2][irisColumns-1];
+        trainOut = new double[irisRows/2][1];
+        testIn = new double[irisRows-(irisRows/2)][irisColumns-1];
+        testOut = new double[irisRows-(irisRows/2)][1];
         double[][] parsed = parseCSV(filename, separator);
         double[][] shuffled = shuffleData(parsed);
         splitData(shuffled);
