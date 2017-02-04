@@ -49,8 +49,11 @@ public class IrisAnalysis {
         trainOut = new double[(irisRows / 2)][1];
         testIn = new double[irisRows - (irisRows / 2)][irisColumns - 1];
         testOut = new double[irisRows - (irisRows / 2)][1];
+        // Parse data from csv
         double[][] parsed = parseCSV(filename, separator);
+        // Shuffle data randomly
         double[][] shuffled = shuffleData(parsed);
+        // Split data in half, training and testing
         splitData(shuffled);
     }
 
