@@ -49,10 +49,10 @@ public class IrisAnalysis {
      */
     public IrisAnalysis(final String filename, final String separator) {
         // Init train and test data with correct sizes
-        trainIn = new double[(irisRows / 2)][irisColumns - 1];
-        trainOut = new double[(irisRows / 2)][1];
-        testIn = new double[irisRows - (irisRows / 2)][irisColumns - 1];
-        testOut = new double[irisRows - (irisRows / 2)][1];
+        trainIn = new double[100][irisColumns - 1];
+        trainOut = new double[100][1];
+        testIn = new double[50][irisColumns - 1];
+        testOut = new double[50][1];
         // Parse data from csv
         double[][] parsed = parseCSV(filename, separator);
         // Shuffle data randomly
@@ -163,14 +163,14 @@ public class IrisAnalysis {
      */
     private void splitData(final double[][] data) {
         for (int i = 0; i < data.length; i++) {
-            if (i < data.length / 2) {
+            if (i < 100) {
                 for (int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
                 trainOut[i][0] = data[i][data[i].length - 1];
             } else {
                 // Test data index (starts from zero)
-                int k = i - (data.length / 2);
+                int k = i - 100;
                 for (int j = 0; j < data[i].length - 1; j++) {
                     testIn[k][j] = data[i][j];
                 }
