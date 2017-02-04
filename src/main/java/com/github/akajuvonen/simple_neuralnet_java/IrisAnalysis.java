@@ -61,7 +61,7 @@ public class IrisAnalysis {
         splitData(shuffled);
         // Init some variables for neural net
         final int hiddenSize = 4;
-        final int maxIterations = 50000;
+        final int maxIterations = 100000;
         final double learningRate = 0.15;
         // Init and train neural net
         net = new NeuralNet(hiddenSize, maxIterations, trainIn, trainOut,
