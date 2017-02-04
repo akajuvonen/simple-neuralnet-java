@@ -69,6 +69,13 @@ public class IrisAnalysis {
     }
 
     /**
+     * Classifies test data using trained network.
+     */
+    public void classify() {
+        double[][] result = net.classify(testIn);
+    }
+
+    /**
      * Iris data CSV parser.
      *
      * @param filename Path to iris data csv file
@@ -173,5 +180,6 @@ public class IrisAnalysis {
     public static void main(final String[] args) {
         String filename = "data/iris.data";
         IrisAnalysis iris = new IrisAnalysis(filename, ",");
+        iris.classify();
     }
 }
