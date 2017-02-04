@@ -20,11 +20,11 @@ public class IrisAnalysis {
     /**
      * Iris data row count.
      */
-    private final int irisRows = 150;
+    private final int irisRows;
     /**
      * Iris data column count.
      */
-    private final int irisColumns = 5;
+    private final int irisColumns;
     /**
      * Training data inputs.
      */
@@ -42,12 +42,21 @@ public class IrisAnalysis {
      */
     private double[][] testOut;
     /**
+     * Test data sample size.
+     */
+     private int testSize;
+    /**
      * Iris data analysis constructor.
      *
      * @param filename Path to iris data csv file
      * @param separator A string character used to split csv line into tokens
      */
     public IrisAnalysis(final String filename, final String separator) {
+        // Init iris related variables
+        irisRows = 150;
+        irisColumns = 5;
+        // Choose test size
+        testSize = 100;
         // Init train and test data with correct sizes
         trainIn = new double[100][irisColumns - 1];
         trainOut = new double[100][1];
