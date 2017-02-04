@@ -73,6 +73,13 @@ public class IrisAnalysis {
      */
     public void classify() {
         double[][] result = net.classify(testIn);
+        for (int i = 0; i < testOut.length; i++) {
+            System.out.println("Classification result:");
+            System.out.println(result[i][0]);
+            System.out.println("Expected result:");
+            System.out.println(testOut[i][0]);
+            System.out.println("-----");
+        }
     }
 
     /**
