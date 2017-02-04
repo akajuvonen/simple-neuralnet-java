@@ -14,6 +14,10 @@ import java.util.Random;
  */
 public class IrisAnalysis {
     /**
+     * The neural net that performs analysis.
+     */
+    private NeuralNet net;
+    /**
      * Iris data row count.
      */
     private final int irisRows = 150;
@@ -55,6 +59,13 @@ public class IrisAnalysis {
         double[][] shuffled = shuffleData(parsed);
         // Split data in half, training and testing
         splitData(shuffled);
+        // Init some variables for neural net
+        final int hiddenSize = 4;
+        final int maxIterations = 50000;
+        final double learningRate = 0.15;
+        // Init and train neural net
+        net = new NeuralNet(hiddenSize, maxIterations, trainIn, trainOut,
+                            learningRate);
     }
 
     /**
