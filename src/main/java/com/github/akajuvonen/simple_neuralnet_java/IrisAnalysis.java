@@ -79,9 +79,13 @@ public class IrisAnalysis {
         double[][] result = net.classify(testIn);
         for (int i = 0; i < testOut.length; i++) {
             System.out.println("Classification result:");
-            System.out.println(Math.round(result[i][0]));
+            for (int j = 0; j < result[i].length; j++) {
+                System.out.println(result[i][j]);
+            }
             System.out.println("Expected result:");
-            System.out.println(testOut[i][0]);
+            for (int j = 0; j < testOut[i].length; j++) {
+                System.out.println(testOut[i][j]);
+            }
             System.out.println("-----");
         }
     }
