@@ -75,7 +75,7 @@ public class IrisAnalysis {
     /**
      * Classifies test data using trained network.
      */
-    public void classify() {
+    public final void classify() {
         double[][] result = net.classify(testIn);
         for (int i = 0; i < testOut.length; i++) {
             System.out.println("Classification result:");
