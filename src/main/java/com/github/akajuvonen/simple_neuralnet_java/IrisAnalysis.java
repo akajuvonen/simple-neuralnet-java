@@ -55,8 +55,8 @@ public class IrisAnalysis {
         // Init train and test data with correct sizes
         trainIn = new double[testSize][irisColumns - 1];
         trainOut = new double[testSize][1];
-        testIn = new double[irisRows - testSize][irisColumns - 1];
-        testOut = new double[irisRows - testSize][1];
+        testIn = new double[(irisRows - testSize)][irisColumns - 1];
+        testOut = new double[(irisRows - testSize)][1];
         // Parse data from csv
         double[][] parsed = parseCSV(filename, separator);
         // Shuffle data randomly
