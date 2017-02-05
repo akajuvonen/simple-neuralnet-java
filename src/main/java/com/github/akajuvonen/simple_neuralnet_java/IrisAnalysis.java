@@ -26,6 +26,10 @@ public class IrisAnalysis {
      */
     private final int irisColumns = 5;
     /**
+     * How many types of flowers can be found in the data.
+     */
+    private final int irisFlowerTypes = 3;
+    /**
      * Training data inputs.
      */
     private double[][] trainIn;
@@ -54,9 +58,9 @@ public class IrisAnalysis {
     public IrisAnalysis(final String filename, final String separator) {
         // Init train and test data with correct sizes
         trainIn = new double[testSize][irisColumns - 1];
-        trainOut = new double[testSize][3];
+        trainOut = new double[testSize][irisFlowerTypes];
         testIn = new double[(irisRows - testSize)][irisColumns - 1];
-        testOut = new double[(irisRows - testSize)][3];
+        testOut = new double[(irisRows - testSize)][irisFlowerTypes];
         // Parse data from csv
         double[][] parsed = parseCSV(filename, separator);
         // Shuffle data randomly
