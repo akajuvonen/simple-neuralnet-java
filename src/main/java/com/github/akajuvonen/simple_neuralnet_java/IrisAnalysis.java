@@ -54,9 +54,9 @@ public class IrisAnalysis {
     public IrisAnalysis(final String filename, final String separator) {
         // Init train and test data with correct sizes
         trainIn = new double[testSize][irisColumns - 1];
-        trainOut = new double[testSize][1];
+        trainOut = new double[testSize][3];
         testIn = new double[(irisRows - testSize)][irisColumns - 1];
-        testOut = new double[(irisRows - testSize)][1];
+        testOut = new double[(irisRows - testSize)][3];
         // Parse data from csv
         double[][] parsed = parseCSV(filename, separator);
         // Shuffle data randomly
@@ -171,14 +171,14 @@ public class IrisAnalysis {
                 for (int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
-                trainOut[i][0] = data[i][data[i].length - 1];
+                trainOut[i][(int)Math.round(data[i][data[i].length - 1])] = 1.0;
             } else {
                 // Test data index (starts from zero)
                 int k = i - testSize;
                 for (int j = 0; j < data[i].length - 1; j++) {
                     testIn[k][j] = data[i][j];
                 }
-                testOut[k][0] = data[i][data[i].length - 1];
+                testOut[k][(int)Math.round(data[i][data[i].length - 1])] = 1.0;
             }
         }
     }
