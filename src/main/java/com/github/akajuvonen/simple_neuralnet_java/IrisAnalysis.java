@@ -84,11 +84,11 @@ public class IrisAnalysis {
         for (int i = 0; i < testOut.length; i++) {
             System.out.println("Classification result:");
             for (int j = 0; j < result[i].length; j++) {
-                System.out.println(result[i][j]);
+                System.out.println(Math.round(result[i][j]));
             }
             System.out.println("Expected result:");
             for (int j = 0; j < testOut[i].length; j++) {
-                System.out.println(testOut[i][j]);
+                System.out.println(Math.round(testOut[i][j]));
             }
             System.out.println("-----");
         }
