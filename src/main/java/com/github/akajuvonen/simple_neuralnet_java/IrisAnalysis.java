@@ -10,7 +10,7 @@ import java.util.Random;
  * Iris data analysis class.
  *
  * @author Antti Juvonen
- * @version 0.7
+ * @version 1.0
  */
 public class IrisAnalysis {
     /**
