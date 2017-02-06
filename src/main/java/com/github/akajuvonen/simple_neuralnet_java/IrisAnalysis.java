@@ -80,7 +80,9 @@ public class IrisAnalysis {
      * Classifies test data using trained network.
      */
     public final void classify() {
+        // Classify data using neural net
         double[][] result = net.classify(testIn);
+        // Print the result and expected actual result from test data
         for (int i = 0; i < testOut.length; i++) {
             System.out.println("Classification result:");
             for (int j = 0; j < result[i].length; j++) {
@@ -175,10 +177,14 @@ public class IrisAnalysis {
      */
     private void splitData(final double[][] data) {
         for (int i = 0; i < data.length; i++) {
+            // Take the [testSize] first elements to train data
+            // The rest will be testing.
             if (i < testSize) {
                 for (int j = 0; j < data[i].length - 1; j++) {
                     trainIn[i][j] = data[i][j];
                 }
+                // Convert from int to binary form. E.g., 0 becomes 1 0 0,
+                // 1 is 0 1 0 and so on.
                 trainOut[i][(int) Math.round(data[i][data[i].length - 1])] =
                     1.0;
             } else {
