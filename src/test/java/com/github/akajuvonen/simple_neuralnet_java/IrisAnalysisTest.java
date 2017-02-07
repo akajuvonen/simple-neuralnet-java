@@ -11,10 +11,26 @@ import static org.junit.Assert.assertTrue;
  */
 public class IrisAnalysisTest {
     /**
-     * Test smth.
+     * Test CSV parsing.
      */
     @Test
-    public void testSmth() {
+    public void testCSVParser() {
+        assertTrue(true);
+    }
+
+    /**
+     * Test data shuffling.
+     */
+    @Test
+    public void testDataShuffling() {
+        assertTrue(true);
+    }
+
+    /**
+     * Test data splitting.
+     */
+    @Test
+    public void testDataSplitting() {
         assertTrue(true);
     }
 }
