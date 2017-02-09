@@ -26,8 +26,8 @@ public class IrisAnalysisTest {
             writer.println("9.0,10.0,11.0,12.0,Iris-virginica");
             writer.close();
         } catch (IOException e) {
-            System.out.println("Can't read test file");
-}
+            System.out.println("Can't read test.data");
+        }
         assertTrue(true);
     }
 
