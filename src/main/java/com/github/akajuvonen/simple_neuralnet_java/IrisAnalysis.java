@@ -79,10 +79,11 @@ public class IrisAnalysis {
     /**
      * Classifies test data using trained network.
      */
-    public final void classify() {
+    public double[][] classify() {
         // Classify data using neural net
         double[][] result = net.classify(testIn);
         // Print the result and expected actual result from test data
+        /**
         for (int i = 0; i < testOut.length; i++) {
             // Print the line number
             System.out.println(i+1);
@@ -96,6 +97,8 @@ public class IrisAnalysis {
             }
             System.out.println("-----");
         }
+        */
+        return result;
     }
 
     /**
@@ -209,6 +212,6 @@ public class IrisAnalysis {
     public static void main(final String[] args) {
         String filename = "data/iris.data";
         IrisAnalysis iris = new IrisAnalysis(filename, ",");
-        iris.classify();
+        double[][] result = iris.classify();
     }
 }
