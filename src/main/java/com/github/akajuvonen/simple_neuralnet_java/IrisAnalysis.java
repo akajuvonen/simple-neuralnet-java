@@ -78,6 +78,8 @@ public class IrisAnalysis {
 
     /**
      * Classifies test data using trained network.
+     *
+     * @return The classification results in an array.
      */
     public final double[][] classify() {
         // Classify data using neural net
