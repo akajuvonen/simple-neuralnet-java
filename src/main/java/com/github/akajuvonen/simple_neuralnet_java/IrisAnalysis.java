@@ -79,7 +79,7 @@ public class IrisAnalysis {
     /**
      * Classifies test data using trained network.
      */
-    public double[][] classify() {
+    public final double[][] classify() {
         // Classify data using neural net
         double[][] result = net.classify(testIn);
         // Print the result and expected actual result from test data
