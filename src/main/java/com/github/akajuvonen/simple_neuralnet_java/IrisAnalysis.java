@@ -44,7 +44,7 @@ public class IrisAnalysis {
     /**
      * Testing data outputs.
      */
-    private double[][] testOut;
+    public double[][] testOut;
     /**
      * Test data sample size.
      */
@@ -79,27 +79,11 @@ public class IrisAnalysis {
     /**
      * Classifies test data using trained network.
      *
-     * @return The classification results in an array.
+     * @return The classification results in an arraghy.
      */
     public final double[][] classify() {
         // Classify data using neural net
         double[][] result = net.classify(testIn);
-        // Print the result and expected actual result from test data
-        /**
-        for (int i = 0; i < testOut.length; i++) {
-            // Print the line number
-            System.out.println(i+1);
-            System.out.println("Classification result:");
-            for (int j = 0; j < result[i].length; j++) {
-                System.out.println(Math.round(result[i][j]));
-            }
-            System.out.println("Expected result:");
-            for (int j = 0; j < testOut[i].length; j++) {
-                System.out.println(Math.round(testOut[i][j]));
-            }
-            System.out.println("-----");
-        }
-        */
         return result;
     }
 
@@ -215,5 +199,19 @@ public class IrisAnalysis {
         String filename = "data/iris.data";
         IrisAnalysis iris = new IrisAnalysis(filename, ",");
         double[][] result = iris.classify();
+        // Print the result and expected actual result from test data
+        for (int i = 0; i < iris.testOut.length; i++) {
+            // Print the line number
+            System.out.println(i+1);
+            System.out.println("Classification result:");
+            for (int j = 0; j < result[i].length; j++) {
+                System.out.println(Math.round(result[i][j]));
+            }
+            System.out.println("Expected result:");
+            for (int j = 0; j < iris.testOut[i].length; j++) {
+                System.out.println(Math.round(iris.testOut[i][j]));
+            }
+            System.out.println("-----");
+        }
     }
 }
