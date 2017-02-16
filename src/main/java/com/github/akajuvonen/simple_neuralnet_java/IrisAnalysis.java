@@ -44,7 +44,7 @@ public class IrisAnalysis {
     /**
      * Testing data outputs.
      */
-    public double[][] testOut;
+    private double[][] testOut;
     /**
      * Test data sample size.
      */
@@ -74,6 +74,13 @@ public class IrisAnalysis {
         // Init and train neural net
         net = new NeuralNet(hiddenSize, maxIterations, trainIn, trainOut,
                             learningRate);
+    }
+
+    /**
+     * Getter method for private variable (test outputs).
+     */
+    public double[][] getTestOut() {
+        return this.testOut;
     }
 
     /**
