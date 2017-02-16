@@ -209,7 +209,7 @@ public class IrisAnalysis {
         // Print the result and expected actual result from test data
         for (int i = 0; i < iris.testOut.length; i++) {
             // Print the line number
-            System.out.println(i+1);
+            System.out.println(i + 1);
             System.out.println("Classification result:");
             for (int j = 0; j < result[i].length; j++) {
                 System.out.println(Math.round(result[i][j]));
