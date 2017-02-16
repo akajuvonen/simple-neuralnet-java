@@ -78,8 +78,10 @@ public class IrisAnalysis {
 
     /**
      * Getter method for private variable (test outputs).
+     *
+     * @return Test output array.
      */
-    public double[][] getTestOut() {
+    public final double[][] getTestOut() {
         return this.testOut;
     }
 
