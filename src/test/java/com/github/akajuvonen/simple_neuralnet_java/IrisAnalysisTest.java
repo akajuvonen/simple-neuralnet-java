@@ -26,7 +26,8 @@ public class IrisAnalysisTest {
         double[][] testOut = iris.getTestOut();
         // Correct classifications
         int correctCount = 0;
-        // Check how many classfications are correct
+        // Check how many classfications are correct. Note that this checks
+        // each element of the array.
         for (int i = 0; i < testOut.length; i++) {
             for (int j = 0; j < result[i].length; j++) {
                 int expected = (int)Math.round(testOut[i][j]);
