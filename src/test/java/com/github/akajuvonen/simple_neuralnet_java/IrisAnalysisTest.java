@@ -19,6 +19,8 @@ public class IrisAnalysisTest {
      */
     @Test
     public void testIrisAnalysis() {
-        assertTrue(true);
+        String filename = "data/iris.data";
+        IrisAnalysis iris = new IrisAnalysis(filename, ",");
+        double[][] result = iris.classify();
     }
 }
