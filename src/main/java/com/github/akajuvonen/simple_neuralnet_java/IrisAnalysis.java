@@ -210,7 +210,9 @@ public class IrisAnalysis {
         double[][] result = iris.classify();
         // Print the result and expected actual result from test data
         for (int i = 0; i < iris.testOut.length; i++) {
+            // The actual classification result for current element
             int actual = Math.round(result[i][j]);
+            // The expected correct result
             int expected = Math.round(iris.testOut[i][j]);
             // Print the line number
             System.out.println(i + 1);
