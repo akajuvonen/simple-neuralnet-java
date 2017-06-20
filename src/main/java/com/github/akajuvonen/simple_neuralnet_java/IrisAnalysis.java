@@ -210,15 +210,17 @@ public class IrisAnalysis {
         double[][] result = iris.classify();
         // Print the result and expected actual result from test data
         for (int i = 0; i < iris.testOut.length; i++) {
+            int actual = Math.round(result[i][j]);
+            int expected = Math.round(iris.testOut[i][j]);
             // Print the line number
             System.out.println(i + 1);
             System.out.println("Classification result:");
             for (int j = 0; j < result[i].length; j++) {
-                System.out.println(Math.round(result[i][j]));
+                System.out.println(actual;
             }
             System.out.println("Expected result:");
             for (int j = 0; j < iris.testOut[i].length; j++) {
-                System.out.println(Math.round(iris.testOut[i][j]));
+                System.out.println(expected);
             }
             System.out.println("-----");
         }
