@@ -218,7 +218,7 @@ public class IrisAnalysis {
             System.out.println(i + 1);
             System.out.println("Classification result:");
             for (int j = 0; j < result[i].length; j++) {
-                System.out.println(actual;
+                System.out.println(actual);
             }
             System.out.println("Expected result:");
             for (int j = 0; j < iris.testOut[i].length; j++) {
