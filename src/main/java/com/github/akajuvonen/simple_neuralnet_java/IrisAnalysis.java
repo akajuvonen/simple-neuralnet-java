@@ -208,6 +208,10 @@ public class IrisAnalysis {
         String filename = "data/iris.data";
         IrisAnalysis iris = new IrisAnalysis(filename, ",");
         double[][] result = iris.classify();
+        // Total classifications
+        int total = 0;
+        // Correct classifications
+        int correct = 0;
         // Print the result and expected actual result from test data
         // Also calculate the percentage of correct calculations
         for (int i = 0; i < iris.testOut.length; i++) {
@@ -216,7 +220,16 @@ public class IrisAnalysis {
                 int actual = (int) Math.round(result[i][j]);
                 // The expected correct result
                 int expected = (int) Math.round(iris.testOut[i][j]);
+                // Check if actual classification matches the expected
+                if (expected == 1) {
+                    total++;
+                    if (actual == 1) {
+                        correct++;
+                    }
+                }
             }
         }
+        System.out.println(total);
+        System.out.println(correct);
     }
 }
