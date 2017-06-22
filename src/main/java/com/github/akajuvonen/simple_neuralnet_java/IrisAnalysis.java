@@ -213,9 +213,9 @@ public class IrisAnalysis {
         for (int i = 0; i < iris.testOut.length; i++) {
             for (int j = 0; j < result[i].length; j++) {
                 // The actual classification result for current element
-                long actual = Math.round(result[i][j]);
+                int actual = (int) Math.round(result[i][j]);
                 // The expected correct result
-                long expected = Math.round(iris.testOut[i][j]);
+                int expected = (int) Math.round(iris.testOut[i][j]);
             }
         }
     }
