@@ -41,6 +41,6 @@ public class IrisAnalysisTest {
         }
         final int totalElements = 150;
         double correctRatio = (double)correctCount/(double)totalElements;
-        assertTrue(correctRatio > 0.95);
+        assertTrue(correctRatio > 0.90);
     }
 }
