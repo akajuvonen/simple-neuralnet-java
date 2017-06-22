@@ -211,15 +211,12 @@ public class IrisAnalysis {
         // Print the result and expected actual result from test data
         // Also calculate the percentage of correct calculations
         for (int i = 0; i < iris.testOut.length; i++) {
-            // Print the line number
-            System.out.println(i + 1);
             for (int j = 0; j < result[i].length; j++) {
                 // The actual classification result for current element
                 long actual = Math.round(result[i][j]);
                 // The expected correct result
                 long expected = Math.round(iris.testOut[i][j]);
             }
-            System.out.println("-----");
         }
     }
 }
