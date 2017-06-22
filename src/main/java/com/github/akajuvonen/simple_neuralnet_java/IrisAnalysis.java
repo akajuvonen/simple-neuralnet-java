@@ -229,7 +229,11 @@ public class IrisAnalysis {
                 }
             }
         }
+        System.out.println("Total classifications:");
         System.out.println(total);
+        System.out.println("Correctly classified:");
         System.out.println(correct);
+        System.out.println("Percentage of correct classifications:");
+        System.out.println(100 * (double) correct / total);
     }
 }
