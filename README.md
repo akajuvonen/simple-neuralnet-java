@@ -11,7 +11,11 @@ Executing `make run` runs the network with a simple binary test data (found in t
 
 ## Iris flower data test
 
-`make iris` runs the Iris flower data test. It then prints the actual and expected classification results. `make clean` cleans up the project packages and data files.
+`make iris` runs the Iris flower data test. It then prints the actual and expected classification results. 
+
+## Cleaning
+
+`make clean` cleans up the project packages and data files.
 
 ## Testing
 
