@@ -13,6 +13,16 @@ Executing `make run` runs the network with a simple binary test data (found in t
 
 `make iris` runs the Iris flower data test. It then prints the actual and expected classification results. 
 
+The analysis prints out the results:
+```
+Total classifications:
+50
+Correctly classified:
+49
+Percentage of correct classifications:
+98.0
+```
+
 ## Cleaning
 
 `make clean` cleans up the project packages and data files.
