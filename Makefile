@@ -1,7 +1,7 @@
 all:	init
 
 init:
-	mkdir data
+	mkdir -p data
 	wget https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data -P data/	
 	mvn package
 	
