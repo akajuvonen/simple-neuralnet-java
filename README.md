@@ -1,4 +1,4 @@
-#simple-neuralnet-java
+# simple-neuralnet-java
 
 A simple MLP neural network using Java. Now uses Maven build system (which means it has to be installed).
 
